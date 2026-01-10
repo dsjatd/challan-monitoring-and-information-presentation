@@ -1,0 +1,1917 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Challan Monitoring System Presentation</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&amp;family=Open+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/pptxgenjs@3.10.0/dist/pptxgen.bundle.js"></script>
+
+<style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f8fafc;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+        }
+        /* Custom Colors based on Pakistan Government themes */
+        .bg-gov-green { background-color: #115740; }
+        .bg-gov-blue { background-color: #002F6C; }
+        .text-gov-green { color: #115740; }
+        .text-gov-blue { color: #002F6C; }
+        .border-gov-blue { border-color: #002F6C; }
+    </style>
+</head>
+<body class="w-full min-h-screen overflow-y-auto overflow-x-hidden bg-white">
+<button
+  id="exportPPT"
+  class="fixed bottom-6 right-6 z-50 bg-gov-blue text-white px-6 py-3 rounded-lg shadow-lg hover:bg-gov-green transition font-semibold"
+>
+  <i class="fas fa-file-powerpoint mr-2"></i>
+  Export to PowerPoint
+</button>
+
+<!-- Top Decorative Bar -->
+<div class="w-full h-4 bg-gov-green absolute top-0 left-0 z-20"></div>
+<div class="w-full h-2 bg-gov-blue absolute top-4 left-0 z-20 opacity-80"></div>
+<!-- Main Content Container -->
+<div class="flex-1 flex flex-col items-center justify-center relative z-10 pt-12 pb-16">
+<!-- Logo/Emblem Area -->
+<div class="mb-8 flex flex-col items-center justify-center">
+<div class="w-24 h-24 bg-blue-50 rounded-full flex items-center justify-center border-4 border-gov-blue shadow-lg mb-4">
+<i class="fas fa-scale-balanced text-5xl text-gov-blue"></i>
+</div>
+<div class="text-center">
+<p class="text-sm font-bold tracking-[0.2em] text-gray-500 uppercase">District Judiciary</p>
+</div>
+</div>
+<!-- Title Section -->
+<div class="text-center w-full max-w-5xl px-8 mb-10">
+<h1 class="text-6xl font-extrabold text-gray-900 leading-tight mb-2">
+                Challan Monitoring &amp; <br/>
+<span class="text-gov-blue">Information System</span>
+</h1>
+<h2 class="text-3xl text-gov-green font-bold mt-4 mb-4">
+                Abbottabad District
+            </h2>
+<!-- Separator Line -->
+<div class="h-1 w-32 bg-yellow-500 mx-auto rounded-full mb-6"></div>
+<p class="text-xl text-gray-600 font-medium italic tracking-wide">
+                "For Efficient FIR to Court Tracking &amp; UTP Monitoring"
+            </p>
+</div>
+<!-- Information Cards -->
+<div class="w-full max-w-6xl px-12 grid grid-cols-3 gap-8 mt-4">
+<!-- Presenter Card -->
+<div class="bg-white p-6 rounded-lg border-l-4 border-gov-blue shadow-md transform transition-transform hover:-translate-y-1">
+<div class="flex items-center mb-2">
+<i class="fas fa-user-tie text-gov-blue text-xl mr-3"></i>
+<p class="text-xs font-bold text-gray-400 uppercase tracking-wider">Presented By</p>
+</div>
+<p class="text-lg font-bold text-gray-800 leading-snug">IT Incharge</p>
+<p class="text-sm text-gray-600">DSJ Establishment</p>
+</div>
+<!-- Chairperson Card (Prominent) -->
+<div class="bg-blue-50 p-6 rounded-lg border-l-4 border-gov-green shadow-md -mt-4 transform scale-105 z-10">
+<div class="flex items-center mb-2">
+<i class="fas fa-gavel text-gov-green text-xl mr-3"></i>
+<p class="text-xs font-bold text-gray-500 uppercase tracking-wider">Chairperson</p>
+</div>
+<p class="text-xl font-bold text-gray-900 leading-snug">District &amp; Sessions Judge</p>
+<p class="text-base text-gray-700 font-semibold">Abbottabad</p>
+</div>
+<!-- Date Card -->
+<div class="bg-white p-6 rounded-lg border-l-4 border-gov-blue shadow-md transform transition-transform hover:-translate-y-1">
+<div class="flex items-center mb-2">
+<i class="far fa-calendar-alt text-gov-blue text-xl mr-3"></i>
+<p class="text-xs font-bold text-gray-400 uppercase tracking-wider">Date</p>
+</div>
+<p class="text-lg font-bold text-gray-800 leading-snug">January 10, 2026</p>
+<p class="text-sm text-gray-600">Saturday</p>
+</div>
+</div>
+</div>
+<!-- Background Elements -->
+<div class="absolute bottom-0 right-0 opacity-5 pointer-events-none">
+<i class="fas fa-file-contract text-[400px] text-gov-blue transform translate-y-1/4 translate-x-1/4"></i>
+</div>
+<!-- Bottom Wave Footer -->
+<div class="absolute bottom-0 w-full z-0">
+<svg class="w-full h-32 block" preserveaspectratio="none" viewbox="0 0 1440 160">
+<path d="M0,96L80,106.7C160,117,320,139,480,133.3C640,128,800,96,960,80C1120,64,1280,64,1360,64L1440,64L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z" fill="#002F6C" fill-opacity="0.1"></path>
+<path d="M0,128L80,122.7C160,117,320,107,480,112C640,117,800,139,960,138.7C1120,139,1280,117,1360,106.7L1440,96L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z" fill="#115740" fill-opacity="1"></path>
+</svg>
+</div>
+<script>
+document.getElementById("exportPPT").addEventListener("click", async () => {
+
+  const slideElement = document.body; // capture full slide
+
+  // Capture HTML as canvas
+  const canvas = await html2canvas(slideElement, {
+    scale: 2,
+    useCORS: true,
+    backgroundColor: "#ffffff",
+    width: 1280,
+    height: 720
+  });
+
+  const imgData = canvas.toDataURL("image/png");
+
+  // Create PowerPoint
+  let pptx = new PptxGenJS();
+  pptx.defineLayout({ name: "HD", width: 13.33, height: 7.5 });
+  pptx.layout = "HD";
+
+  let slide = pptx.addSlide();
+
+  slide.addImage({
+    data: imgData,
+    x: 0,
+    y: 0,
+    w: 13.33,
+    h: 7.5
+  });
+
+  pptx.writeFile("Challan_Monitoring_System.pptx");
+});
+</script>
+
+</body>
+</html><br><br> <hr><br> <!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Purpose and Objectives</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&amp;family=Open+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f8fafc;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+        }
+        /* Custom Colors based on Pakistan Government themes */
+        .bg-gov-green { background-color: #115740; }
+        .bg-gov-blue { background-color: #002F6C; }
+        .text-gov-green { color: #115740; }
+        .text-gov-blue { color: #002F6C; }
+        .border-gov-blue { border-color: #002F6C; }
+        .border-gov-green { border-color: #115740; }
+        .bg-blue-light { background-color: #e6f0fa; }
+    </style>
+</head>
+<body class="w-full min-h-screen overflow-y-auto overflow-x-hidden bg-white">
+<!-- Top Decorative Bar -->
+<div class="w-full h-3 bg-gov-green absolute top-0 left-0 z-20"></div>
+<div class="w-full h-1 bg-gov-blue absolute top-3 left-0 z-20 opacity-80"></div>
+<!-- Header Section -->
+<header class="pt-12 px-16 pb-6 flex justify-between items-end border-b border-gray-200">
+<div>
+<h2 class="text-sm font-bold tracking-[0.2em] text-gov-green uppercase mb-2">Challan Monitoring System</h2>
+<h1 class="text-5xl font-bold text-gov-blue relative inline-block">
+                Purpose &amp; Objectives
+                <span class="absolute -bottom-2 left-0 w-1/3 h-1.5 bg-yellow-500 rounded-full"></span>
+</h1>
+</div>
+<div class="flex items-center opacity-80">
+<div class="text-right mr-4">
+<p class="text-xs text-gray-500 font-bold uppercase">Abbottabad</p>
+<p class="text-sm font-bold text-gov-blue">Sessions Courts</p>
+</div>
+<i class="fas fa-scale-balanced text-3xl text-gov-green"></i>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="flex-1 px-16 py-10 flex gap-12 relative z-10">
+<!-- Left Column: Primary Objectives List -->
+<div class="flex-1 flex flex-col justify-center space-y-6">
+<!-- Objective 1 -->
+<div class="flex items-start p-4 rounded-lg bg-white shadow-sm border-l-4 border-gov-blue hover:shadow-md transition-shadow duration-300">
+<div class="flex-shrink-0 w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center mr-5 mt-1">
+<i class="fas fa-stopwatch text-xl text-gov-blue"></i>
+</div>
+<div class="flex-1">
+<h3 class="text-xl font-bold text-gray-800 mb-1">Real-time Monitoring</h3>
+<p class="text-gray-600 leading-relaxed">End-to-end tracking of FIR to Court challan submission process across the district.</p>
+</div>
+</div>
+<!-- Objective 2 -->
+<div class="flex items-start p-4 rounded-lg bg-white shadow-sm border-l-4 border-gov-green hover:shadow-md transition-shadow duration-300">
+<div class="flex-shrink-0 w-12 h-12 bg-green-50 rounded-full flex items-center justify-center mr-5 mt-1">
+<i class="fas fa-arrow-trend-down text-xl text-gov-green"></i>
+</div>
+<div class="flex-1">
+<h3 class="text-xl font-bold text-gray-800 mb-1">Reduce Delays</h3>
+<p class="text-gray-600 leading-relaxed">Minimize latency in submission of challans through automated alerts and tracking.</p>
+</div>
+</div>
+<!-- Objective 3 -->
+<div class="flex items-start p-4 rounded-lg bg-white shadow-sm border-l-4 border-red-500 hover:shadow-md transition-shadow duration-300">
+<div class="flex-shrink-0 w-12 h-12 bg-red-50 rounded-full flex items-center justify-center mr-5 mt-1">
+<i class="fas fa-user-lock text-xl text-red-600"></i>
+</div>
+<div class="flex-1">
+<h3 class="text-xl font-bold text-gray-800 mb-1">UTP Prioritization</h3>
+<p class="text-gray-600 leading-relaxed">Ensure absolute priority for Under Trial Prisoners (UTPs) to uphold legal rights and timelines.</p>
+</div>
+</div>
+</div>
+<!-- Right Column: Secondary Objectives & Visual Context -->
+<div class="w-1/3 flex flex-col gap-6 pt-2">
+<!-- Context Block 1 -->
+<div class="bg-blue-light p-6 rounded-xl border border-blue-100 relative overflow-hidden">
+<div class="absolute -right-6 -top-6 text-blue-100 opacity-50">
+<i class="fas fa-laptop-code text-9xl"></i>
+</div>
+<div class="relative z-10">
+<div class="w-10 h-10 bg-gov-blue rounded flex items-center justify-center mb-3">
+<i class="fas fa-users-viewfinder text-white"></i>
+</div>
+<h3 class="text-lg font-bold text-gov-blue mb-2">Stakeholder Access</h3>
+<p class="text-sm text-gray-700 leading-relaxed">Provide unified dashboard access for decision-makers including DSJ, Magistrates, DPP, and Police officials.</p>
+</div>
+</div>
+<!-- Context Block 2 -->
+<div class="bg-gray-50 p-6 rounded-xl border border-gray-200 relative overflow-hidden">
+<div class="absolute -right-4 -bottom-4 text-gray-200 opacity-50">
+<i class="fas fa-file-contract text-8xl"></i>
+</div>
+<div class="relative z-10">
+<div class="w-10 h-10 bg-gov-green rounded flex items-center justify-center mb-3">
+<i class="fas fa-chart-pie text-white"></i>
+</div>
+<h3 class="text-lg font-bold text-gov-green mb-2">CJCC Reporting</h3>
+<p class="text-sm text-gray-700 leading-relaxed">Automate the generation of accurate statistical reports for the Criminal Justice Coordination Committee review.</p>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<div class="h-12 w-full bg-white border-t border-gray-200 flex items-center justify-between px-16 relative z-20">
+<p class="text-xs text-gray-400">Challan Monitoring &amp; Information System</p>
+<div class="flex items-center gap-2">
+<span class="h-1.5 w-1.5 rounded-full bg-gov-green"></span>
+<span class="h-1.5 w-1.5 rounded-full bg-gray-300"></span>
+<span class="h-1.5 w-1.5 rounded-full bg-gray-300"></span>
+<span class="h-1.5 w-1.5 rounded-full bg-gray-300"></span>
+<p class="text-xs font-bold text-gov-blue ml-2">Page 02</p>
+</div>
+</div>
+<!-- Background Decorative Element -->
+<div class="absolute bottom-0 right-0 w-1/3 h-full z-0 pointer-events-none opacity-5">
+<svg viewbox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+<path d="M45.7,-76.3C58.9,-69.3,69.1,-58.3,77.3,-46.3C85.5,-34.3,91.7,-21.3,90.3,-8.8C88.9,3.7,79.9,15.7,70.8,26.4C61.7,37.1,52.5,46.5,41.9,53.8C31.3,61.1,19.3,66.3,6.3,68.3C-6.7,70.4,-20.7,69.3,-33.5,63.9C-46.3,58.5,-57.9,48.8,-66.6,37.1C-75.3,25.4,-81.1,11.7,-80.6,-1.7C-80.1,-15.1,-73.3,-28.2,-63.4,-38.7C-53.5,-49.2,-40.5,-57.1,-27.6,-64.3C-14.7,-71.5,-1.9,-78,12.5,-79.8C26.9,-81.6,53.8,-78.6,45.7,-76.3Z" fill="#002F6C" transform="translate(100 100)"></path>
+</svg>
+</div>
+</body>
+</html><br><br> <hr> <br> <br>
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Current Challenges</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&amp;family=Open+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f8fafc;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+        }
+        /* Custom Colors based on Pakistan Government themes */
+        .bg-gov-green { background-color: #115740; }
+        .bg-gov-blue { background-color: #002F6C; }
+        .text-gov-green { color: #115740; }
+        .text-gov-blue { color: #002F6C; }
+        .border-gov-blue { border-color: #002F6C; }
+        .border-gov-green { border-color: #115740; }
+        .bg-blue-light { background-color: #e6f0fa; }
+        .bg-red-light { background-color: #fef2f2; }
+    </style>
+</head>
+<body class="w-full min-h-screen overflow-y-auto overflow-x-hidden bg-white">
+<!-- Top Decorative Bar -->
+<div class="w-full h-3 bg-gov-green absolute top-0 left-0 z-20"></div>
+<div class="w-full h-1 bg-gov-blue absolute top-3 left-0 z-20 opacity-80"></div>
+<!-- Header Section -->
+<header class="pt-10 px-16 pb-4 flex justify-between items-end border-b border-gray-200">
+<div>
+<h2 class="text-sm font-bold tracking-[0.2em] text-gov-green uppercase mb-2">Challan Monitoring System</h2>
+<h1 class="text-5xl font-bold text-gov-blue relative inline-block">
+                Current Challenges
+                <span class="absolute -bottom-2 left-0 w-1/3 h-1.5 bg-yellow-500 rounded-full"></span>
+</h1>
+</div>
+<div class="flex items-center opacity-80">
+<div class="text-right mr-4">
+<p class="text-xs text-gray-500 font-bold uppercase">Abbottabad</p>
+<p class="text-sm font-bold text-gov-blue">Sessions Courts</p>
+</div>
+<i class="fas fa-triangle-exclamation text-3xl text-red-700"></i>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="flex-1 px-16 py-6 flex gap-10 relative z-10 overflow-hidden">
+<!-- Left Column: Challenges List -->
+<div class="flex-1 flex flex-col justify-center space-y-a3">
+<!-- Challenge 1 -->
+<div class="flex items-center p-3 rounded-lg bg-white shadow-sm border-l-4 border-gov-blue hover:shadow-md transition-shadow duration-300">
+<div class="flex-shrink-0 w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center mr-4">
+<i class="fas fa-clock text-lg text-gov-blue"></i>
+</div>
+<div class="flex-1">
+<h3 class="text-lg font-bold text-gray-800">Delayed Submission</h3>
+<p class="text-sm text-gray-600">Significant delays in forwarding challans from Police Stations to DPP office.</p>
+</div>
+</div>
+<!-- Challenge 2 -->
+<div class="flex items-center p-3 rounded-lg bg-white shadow-sm border-l-4 border-gray-500 hover:shadow-md transition-shadow duration-300">
+<div class="flex-shrink-0 w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center mr-4">
+<i class="fas fa-eye-slash text-lg text-gray-600"></i>
+</div>
+<div class="flex-1">
+<h3 class="text-lg font-bold text-gray-800">Lack of Visibility</h3>
+<p class="text-sm text-gray-600">No real-time tracking for DSJ, Magistrates, or DPP to monitor case status.</p>
+</div>
+</div>
+<!-- Challenge 3 -->
+<div class="flex items-center p-3 rounded-lg bg-white shadow-sm border-l-4 border-red-500 hover:shadow-md transition-shadow duration-300">
+<div class="flex-shrink-0 w-10 h-10 bg-red-50 rounded-full flex items-center justify-center mr-4">
+<i class="fas fa-user-slash text-lg text-red-600"></i>
+</div>
+<div class="flex-1">
+<h3 class="text-lg font-bold text-gray-800">No UTP Tracking</h3>
+<p class="text-sm text-gray-600">Critical inability to prioritize Under Trial Prisoners (UTPs) due to manual records.</p>
+</div>
+</div>
+<!-- Challenge 4 -->
+<div class="flex items-center p-3 rounded-lg bg-white shadow-sm border-l-4 border-yellow-500 hover:shadow-md transition-shadow duration-300">
+<div class="flex-shrink-0 w-10 h-10 bg-yellow-50 rounded-full flex items-center justify-center mr-4">
+<i class="fas fa-filter text-lg text-yellow-600"></i>
+</div>
+<div class="flex-1">
+<h3 class="text-lg font-bold text-gray-800">Unidentified Bottlenecks</h3>
+<p class="text-sm text-gray-600">Difficult to pinpoint whether delays originate in Police or DPP offices.</p>
+</div>
+</div>
+<!-- Challenge 5 -->
+<div class="flex items-center p-3 rounded-lg bg-white shadow-sm border-l-4 border-gov-green hover:shadow-md transition-shadow duration-300">
+<div class="flex-shrink-0 w-10 h-10 bg-green-50 rounded-full flex items-center justify-center mr-4">
+<i class="fas fa-file-pen text-lg text-gov-green"></i>
+</div>
+<div class="flex-1">
+<h3 class="text-lg font-bold text-gray-800">Manual Reliance</h3>
+<p class="text-sm text-gray-600">Heavy dependence on manual registers, physical reporting, and phone follow-ups.</p>
+</div>
+</div>
+</div>
+<!-- Right Column: Visual Context -->
+<div class="w-1/3 flex flex-col gap-4 justify-center">
+<!-- Visual Block 1 -->
+<div class="bg-red-light p-5 rounded-xl border border-red-100 relative overflow-hidden h-40 flex flex-col justify-center">
+<div class="absolute -right-4 -top-4 text-red-100 opacity-60">
+<i class="fas fa-hourglass-end text-8xl"></i>
+</div>
+<div class="relative z-10">
+<div class="w-8 h-8 bg-red-600 rounded flex items-center justify-center mb-2">
+<i class="fas fa-chart-line text-white text-xs"></i>
+</div>
+<h3 class="text-lg font-bold text-red-800 mb-1">Process Inefficiency</h3>
+<p class="text-xs text-red-700 leading-relaxed">Current manual workflows create untraceable gaps in the judicial timeline, directly affecting case disposal rates.</p>
+</div>
+</div>
+<!-- Visual Block 2 -->
+<div class="bg-gray-50 p-5 rounded-xl border border-gray-200 relative overflow-hidden h-40 flex flex-col justify-center">
+<div class="absolute -right-4 -bottom-4 text-gray-200 opacity-50">
+<i class="fas fa-folder-open text-7xl"></i>
+</div>
+<div class="relative z-10">
+<div class="w-8 h-8 bg-gray-600 rounded flex items-center justify-center mb-2">
+<i class="fas fa-clipboard-list text-white text-xs"></i>
+</div>
+<h3 class="text-lg font-bold text-gray-800 mb-1">Data Gaps</h3>
+<p class="text-xs text-gray-600 leading-relaxed">Lack of digitized data prevents CJCC and High Court from accessing accurate, real-time district performance metrics.</p>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<div class="h-10 w-full bg-white border-t border-gray-200 flex items-center justify-between px-16 relative z-20">
+<p class="text-xs text-gray-400">Challan Monitoring &amp; Information System</p>
+<div class="flex items-center gap-2">
+<span class="h-1.5 w-1.5 rounded-full bg-gray-300"></span>
+<span class="h-1.5 w-1.5 rounded-full bg-gov-green"></span>
+<span class="h-1.5 w-1.5 rounded-full bg-gray-300"></span>
+<span class="h-1.5 w-1.5 rounded-full bg-gray-300"></span>
+<p class="text-xs font-bold text-gov-blue ml-2">Page 03</p>
+</div>
+</div>
+<!-- Background Decorative Element -->
+<div class="absolute bottom-0 right-0 w-1/3 h-full z-0 pointer-events-none opacity-5">
+<svg viewbox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+<path d="M45.7,-76.3C58.9,-69.3,69.1,-58.3,77.3,-46.3C85.5,-34.3,91.7,-21.3,90.3,-8.8C88.9,3.7,79.9,15.7,70.8,26.4C61.7,37.1,52.5,46.5,41.9,53.8C31.3,61.1,19.3,66.3,6.3,68.3C-6.7,70.4,-20.7,69.3,-33.5,63.9C-46.3,58.5,-57.9,48.8,-66.6,37.1C-75.3,25.4,-81.1,11.7,-80.6,-1.7C-80.1,-15.1,-73.3,-28.2,-63.4,-38.7C-53.5,-49.2,-40.5,-57.1,-27.6,-64.3C-14.7,-71.5,-1.9,-78,12.5,-79.8C26.9,-81.6,53.8,-78.6,45.7,-76.3Z" fill="#8B0000" transform="translate(100 100)"></path>
+</svg>
+</div>
+</body>
+</html><br><br> <hr> <br> <br>
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Proposed Solution</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&amp;family=Open+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f8fafc;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+        }
+        /* Custom Colors based on Pakistan Government themes */
+        .bg-gov-green { background-color: #115740; }
+        .bg-gov-blue { background-color: #002F6C; }
+        .text-gov-green { color: #115740; }
+        .text-gov-blue { color: #002F6C; }
+        .border-gov-blue { border-color: #002F6C; }
+        .border-gov-green { border-color: #115740; }
+        .bg-blue-light { background-color: #e6f0fa; }
+        .bg-green-light { background-color: #f0fdf4; }
+    </style>
+</head>
+<body class="w-full min-h-screen overflow-y-auto overflow-x-hidden bg-white">
+<!-- Top Decorative Bar -->
+<div class="w-full h-3 bg-gov-green absolute top-0 left-0 z-20"></div>
+<div class="w-full h-1 bg-gov-blue absolute top-3 left-0 z-20 opacity-80"></div>
+<!-- Header Section -->
+<header class="pt-12 px-16 pb-6 flex justify-between items-end border-b border-gray-200">
+<div>
+<h2 class="text-sm font-bold tracking-[0.2em] text-gov-green uppercase mb-2">Challan Monitoring System</h2>
+<h1 class="text-5xl font-bold text-gov-blue relative inline-block">
+                Proposed Solution
+                <span class="absolute -bottom-2 left-0 w-1/3 h-1.5 bg-yellow-500 rounded-full"></span>
+</h1>
+</div>
+<div class="flex items-center opacity-80">
+<div class="text-right mr-4">
+<p class="text-xs text-gray-500 font-bold uppercase">Abbottabad</p>
+<p class="text-sm font-bold text-gov-blue">Sessions Courts</p>
+</div>
+<i class="fas fa-network-wired text-3xl text-gov-green"></i>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="flex-1 px-16 py-8 flex gap-12 relative z-10">
+<!-- Left Column: Core Features -->
+<div class="flex-1 flex flex-col justify-center space-y-5">
+<!-- Feature 1 -->
+<div class="flex items-start p-4 rounded-lg bg-white shadow-sm border-l-4 border-gov-blue hover:shadow-md transition-shadow duration-300">
+<div class="flex-shrink-0 w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center mr-5 mt-1">
+<i class="fas fa-desktop text-xl text-gov-blue"></i>
+</div>
+<div class="flex-1">
+<h3 class="text-xl font-bold text-gray-800 mb-1">Web-Based Dashboard</h3>
+<p class="text-gray-600 leading-relaxed">Centralized digital platform accessible to all stakeholders anywhere, removing reliance on manual registers.</p>
+</div>
+</div>
+<!-- Feature 2 -->
+<div class="flex items-start p-4 rounded-lg bg-white shadow-sm border-l-4 border-gov-green hover:shadow-md transition-shadow duration-300">
+<div class="flex-shrink-0 w-12 h-12 bg-green-50 rounded-full flex items-center justify-center mr-5 mt-1">
+<i class="fas fa-route text-xl text-gov-green"></i>
+</div>
+<div class="flex-1">
+<h3 class="text-xl font-bold text-gray-800 mb-1">Lifecycle Tracking</h3>
+<p class="text-gray-600 leading-relaxed">Complete visibility of the challan journey: FIR → DPP Scrutiny → Junior Clerk → Final Court Submission.</p>
+</div>
+</div>
+<!-- Feature 3 -->
+<div class="flex items-start p-4 rounded-lg bg-white shadow-sm border-l-4 border-yellow-500 hover:shadow-md transition-shadow duration-300">
+<div class="flex-shrink-0 w-12 h-12 bg-yellow-50 rounded-full flex items-center justify-center mr-5 mt-1">
+<i class="fas fa-triangle-exclamation text-xl text-yellow-600"></i>
+</div>
+<div class="flex-1">
+<h3 class="text-xl font-bold text-gray-800 mb-1">Intelligent Alerts</h3>
+<p class="text-gray-600 leading-relaxed">Automated notifications for delayed submissions and high-priority UTP cases requiring immediate attention.</p>
+</div>
+</div>
+</div>
+<!-- Right Column: Roles & Integration -->
+<div class="w-1/3 flex flex-col gap-5 pt-2">
+<!-- Role-Based Access Block -->
+<div class="bg-blue-light p-6 rounded-xl border border-blue-100 relative overflow-hidden flex-1">
+<div class="absolute -right-6 -top-6 text-blue-100 opacity-50">
+<i class="fas fa-id-card-clip text-9xl"></i>
+</div>
+<div class="relative z-10 h-full flex flex-col">
+<div class="w-10 h-10 bg-gov-blue rounded flex items-center justify-center mb-3">
+<i class="fas fa-user-shield text-white"></i>
+</div>
+<h3 class="text-lg font-bold text-gov-blue mb-3">Role-Based Logins</h3>
+<ul class="space-y-3 text-sm text-gray-700 flex-1">
+<li class="flex items-center"><i class="fas fa-check text-gov-green mr-2"></i> Police Station (IOs/SHOs)</li>
+<li class="flex items-center"><i class="fas fa-check text-gov-green mr-2"></i> District Public Prosecutor (DPP)</li>
+<li class="flex items-center"><i class="fas fa-check text-gov-green mr-2"></i> Magistrates &amp; Court Clerks</li>
+<li class="flex items-center"><i class="fas fa-check text-gov-green mr-2"></i> District &amp; Sessions Judge (DSJ)</li>
+</ul>
+</div>
+</div>
+<!-- UTP Verification Block -->
+<div class="bg-green-light p-6 rounded-xl border border-green-100 relative overflow-hidden">
+<div class="absolute -right-4 -bottom-4 text-green-100 opacity-50">
+<i class="fas fa-building-lock text-8xl"></i>
+</div>
+<div class="relative z-10">
+<div class="w-10 h-10 bg-gov-green rounded flex items-center justify-center mb-3">
+<i class="fas fa-fingerprint text-white"></i>
+</div>
+<h3 class="text-lg font-bold text-gov-green mb-2">Central Jail Integration</h3>
+<p class="text-sm text-gray-700 leading-relaxed">Dedicated login for Jail authorities to verify UTP status, ensuring accurate prioritization of incarcerated accused.</p>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<div class="h-12 w-full bg-white border-t border-gray-200 flex items-center justify-between px-16 relative z-20">
+<p class="text-xs text-gray-400">Challan Monitoring &amp; Information System</p>
+<div class="flex items-center gap-2">
+<span class="h-1.5 w-1.5 rounded-full bg-gray-300"></span>
+<span class="h-1.5 w-1.5 rounded-full bg-gray-300"></span>
+<span class="h-1.5 w-1.5 rounded-full bg-gray-300"></span>
+<span class="h-1.5 w-1.5 rounded-full bg-gov-green"></span>
+<p class="text-xs font-bold text-gov-blue ml-2">Page 04</p>
+</div>
+</div>
+<!-- Background Decorative Element -->
+<div class="absolute bottom-0 right-0 w-1/3 h-full z-0 pointer-events-none opacity-5">
+<svg viewbox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+<path d="M42.7,-72.8C54.6,-66.1,63.1,-52.3,71.3,-39.2C79.5,-26.1,87.4,-13.8,85.9,-2.1C84.4,9.6,73.5,20.7,63.7,30.3C53.9,39.9,45.2,48.1,35.2,55.5C25.2,62.9,13.9,69.5,1.5,67C-10.9,64.4,-24.4,52.7,-37.2,43.2C-50,33.7,-62.1,26.4,-67.4,16.2C-72.7,6,-71.2,-7.1,-66.5,-19.1C-61.8,-31.1,-53.9,-42,-43.8,-49.4C-33.7,-56.8,-21.4,-60.7,-9.1,-60.7C3.2,-60.7,6.4,-56.8,11.2,-58.5C16,-60.2,30.8,-79.5,42.7,-72.8Z" fill="#002F6C" transform="translate(100 100)"></path>
+</svg>
+</div>
+</body>
+</html><br><br> <hr> <br> <br>
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>System Workflow</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&amp;family=Open+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f8fafc;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+        }
+        /* Custom Colors based on Pakistan Government themes */
+        .bg-gov-green { background-color: #115740; }
+        .bg-gov-blue { background-color: #002F6C; }
+        .text-gov-green { color: #115740; }
+        .text-gov-blue { color: #002F6C; }
+        .border-gov-blue { border-color: #002F6C; }
+        .border-gov-green { border-color: #115740; }
+        
+        .step-card {
+            transition: all 0.3s ease;
+        }
+        .step-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        
+        /* Arrow Animation */
+        .arrow-path {
+            stroke-dasharray: 10;
+            animation: dash 30s linear infinite;
+        }
+        @keyframes dash {
+            to {
+                stroke-dashoffset: -1000;
+            }
+        }
+    </style>
+</head>
+<body class="w-full min-h-screen overflow-y-auto overflow-x-hidden bg-white">
+<!-- Top Decorative Bar -->
+<div class="w-full h-3 bg-gov-green absolute top-0 left-0 z-20"></div>
+<div class="w-full h-1 bg-gov-blue absolute top-3 left-0 z-20 opacity-80"></div>
+<!-- Header Section -->
+<header class="pt-10 px-16 pb-4 flex justify-between items-end border-b border-gray-200 bg-white relative z-20">
+<div>
+<h2 class="text-sm font-bold tracking-[0.2em] text-gov-green uppercase mb-2">Challan Monitoring System</h2>
+<h1 class="text-5xl font-bold text-gov-blue relative inline-block">
+                System Workflow
+                <span class="absolute -bottom-2 left-0 w-1/3 h-1.5 bg-yellow-500 rounded-full"></span>
+</h1>
+</div>
+<div class="flex items-center opacity-80">
+<div class="text-right mr-4">
+<p class="text-xs text-gray-500 font-bold uppercase">Abbottabad</p>
+<p class="text-sm font-bold text-gov-blue">Sessions Courts</p>
+</div>
+<i class="fas fa-network-wired text-3xl text-gov-green"></i>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="flex-1 w-full relative z-10 flex flex-col justify-center items-center p-8">
+<!-- SVG Connector Layer -->
+<svg class="absolute top-0 left-0 w-full h-full z-0 pointer-events-none" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<marker id="arrowhead" markerheight="7" markerwidth="10" orient="auto" refx="9" refy="3.5">
+<polygon fill="#cbd5e1" points="0 0, 10 3.5, 0 7"></polygon>
+</marker>
+<marker id="arrowhead-blue" markerheight="7" markerwidth="10" orient="auto" refx="9" refy="3.5">
+<polygon fill="#002F6C" points="0 0, 10 3.5, 0 7"></polygon>
+</marker>
+</defs>
+<!-- Horizontal Main Flow Lines -->
+<!-- Step 1 to 2 -->
+<line marker-end="url(#arrowhead)" stroke="#cbd5e1" stroke-dasharray="5,5" stroke-width="2" x1="260" x2="380" y1="280" y2="280"></line>
+<!-- Step 2 to 3 -->
+<line marker-end="url(#arrowhead)" stroke="#cbd5e1" stroke-dasharray="5,5" stroke-width="2" x1="580" x2="700" y1="280" y2="280"></line>
+<!-- Step 3 to 4 -->
+<line marker-end="url(#arrowhead)" stroke="#cbd5e1" stroke-dasharray="5,5" stroke-width="2" x1="900" x2="1020" y1="280" y2="280"></line>
+<!-- Vertical Connection for Central Jail -->
+<!-- Connecting from Start (FIR) to Jail Check or just parallel visual -->
+<path class="arrow-path" d="M160,360 C160,450 480,450 480,450" fill="none" stroke="#115740" stroke-dasharray="5,5" stroke-width="2"></path>
+<path class="arrow-path" d="M800,450 C800,450 1120,450 1120,360" fill="none" marker-end="url(#arrowhead-blue)" stroke="#115740" stroke-dasharray="5,5" stroke-width="2"></path>
+</svg>
+<!-- Workflow Container -->
+<div class="w-full max-w-7xl grid grid-cols-4 gap-12 relative z-10">
+<!-- Step 1: Police Station -->
+<div class="step-card flex flex-col items-center">
+<div class="w-20 h-20 bg-gov-blue rounded-2xl flex items-center justify-center shadow-lg mb-4 border-4 border-white z-10 relative">
+<i class="fas fa-building-shield text-3xl text-white"></i>
+<div class="absolute -top-3 -left-3 w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center text-white font-bold shadow-sm">1</div>
+</div>
+<div class="bg-white p-5 rounded-lg border-t-4 border-gov-blue shadow-md w-full text-center">
+<h3 class="font-bold text-gov-blue text-lg mb-1">Police Station</h3>
+<p class="text-xs text-gray-500 font-bold uppercase tracking-wide mb-2">Registration</p>
+<p class="text-sm text-gray-600">Register FIR and initialize digital challan record</p>
+</div>
+</div>
+<!-- Step 2: DPP Office -->
+<div class="step-card flex flex-col items-center">
+<div class="w-20 h-20 bg-white rounded-2xl flex items-center justify-center shadow-lg mb-4 border-4 border-gov-blue z-10 relative">
+<i class="fas fa-magnifying-glass text-3xl text-gov-blue"></i>
+<div class="absolute -top-3 -left-3 w-8 h-8 bg-gray-600 rounded-full flex items-center justify-center text-white font-bold shadow-sm">2</div>
+</div>
+<div class="bg-white p-5 rounded-lg border-t-4 border-gray-600 shadow-md w-full text-center">
+<h3 class="font-bold text-gov-blue text-lg mb-1">DPP Office</h3>
+<p class="text-xs text-gray-500 font-bold uppercase tracking-wide mb-2">Scrutiny</p>
+<p class="text-sm text-gray-600">Verify challan details or return for objection</p>
+</div>
+</div>
+<!-- Step 3: Junior Clerk -->
+<div class="step-card flex flex-col items-center">
+<div class="w-20 h-20 bg-white rounded-2xl flex items-center justify-center shadow-lg mb-4 border-4 border-gov-blue z-10 relative">
+<i class="fas fa-user-pen text-3xl text-gov-blue"></i>
+<div class="absolute -top-3 -left-3 w-8 h-8 bg-gray-600 rounded-full flex items-center justify-center text-white font-bold shadow-sm">3</div>
+</div>
+<div class="bg-white p-5 rounded-lg border-t-4 border-gray-600 shadow-md w-full text-center">
+<h3 class="font-bold text-gov-blue text-lg mb-1">Junior Clerk</h3>
+<p class="text-xs text-gray-500 font-bold uppercase tracking-wide mb-2">Forwarding</p>
+<p class="text-sm text-gray-600">Mark for submission and link to Court Diary</p>
+</div>
+</div>
+<!-- Step 4: Court Submission -->
+<div class="step-card flex flex-col items-center">
+<div class="w-20 h-20 bg-gov-green rounded-2xl flex items-center justify-center shadow-lg mb-4 border-4 border-white z-10 relative">
+<i class="fas fa-gavel text-3xl text-white"></i>
+<div class="absolute -top-3 -left-3 w-8 h-8 bg-gov-blue rounded-full flex items-center justify-center text-white font-bold shadow-sm">4</div>
+</div>
+<div class="bg-white p-5 rounded-lg border-t-4 border-gov-green shadow-md w-full text-center">
+<h3 class="font-bold text-gov-green text-lg mb-1">Court</h3>
+<p class="text-xs text-gray-500 font-bold uppercase tracking-wide mb-2">Submission</p>
+<p class="text-sm text-gray-600">Final submission accepted, status updated in dashboard</p>
+</div>
+</div>
+</div>
+<!-- Central Jail / UTP Verification Layer -->
+<div class="w-full max-w-3xl mt-16 relative z-10">
+<div class="bg-green-50 rounded-xl border-2 border-dashed border-gov-green p-4 flex items-center shadow-sm relative">
+<!-- Label Badge -->
+<div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gov-green text-white px-4 py-1 rounded-full text-xs font-bold tracking-wider">
+                    PARALLEL VERIFICATION PROCESS
+                </div>
+<div class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-sm border border-gov-green mr-6 flex-shrink-0">
+<i class="fas fa-lock text-2xl text-gov-green"></i>
+</div>
+<div class="flex-1">
+<h4 class="font-bold text-gov-green text-lg">Central Jail Database</h4>
+<p class="text-sm text-gray-700">Automatic synchronization to verify Under Trial Prisoner (UTP) status. Flags high-priority cases immediately upon FIR registration or remand.</p>
+</div>
+<div class="ml-4 pl-4 border-l border-green-200">
+<div class="flex flex-col items-center">
+<i class="fas fa-bell text-red-500 text-xl mb-1 animate-pulse"></i>
+<span class="text-[10px] font-bold text-red-600 uppercase">Priority Alert</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<div class="h-12 w-full bg-white border-t border-gray-200 flex items-center justify-between px-16 relative z-20">
+<p class="text-xs text-gray-400">Challan Monitoring &amp; Information System</p>
+<div class="flex items-center gap-2">
+<span class="h-1.5 w-1.5 rounded-full bg-gray-300"></span>
+<span class="h-1.5 w-1.5 rounded-full bg-gov-green"></span>
+<span class="h-1.5 w-1.5 rounded-full bg-gray-300"></span>
+<span class="h-1.5 w-1.5 rounded-full bg-gray-300"></span>
+<p class="text-xs font-bold text-gov-blue ml-2">Page 05</p>
+</div>
+</div>
+</body>
+</html><br><br> <hr> <br> <br>
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Roles &amp; Permissions</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&amp;family=Open+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f8fafc;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+        }
+        /* Custom Colors based on Pakistan Government themes */
+        .bg-gov-green { background-color: #115740; }
+        .bg-gov-blue { background-color: #002F6C; }
+        .text-gov-green { color: #115740; }
+        .text-gov-blue { color: #002F6C; }
+        .border-gov-blue { border-color: #002F6C; }
+        .border-gov-green { border-color: #115740; }
+        
+        /* Table Styling */
+        .role-row {
+            transition: all 0.2s ease;
+        }
+        .role-row:hover {
+            background-color: #f0f7ff;
+            transform: scale(1.005);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            z-index: 10;
+            position: relative;
+        }
+        
+        .permission-badge {
+            background-color: #e2e8f0;
+            color: #475569;
+            font-size: 0.75rem;
+            padding: 0.2rem 0.6rem;
+            border-radius: 9999px;
+            margin-right: 0.5rem;
+            margin-bottom: 0.25rem;
+            display: inline-block;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="w-full min-h-screen overflow-y-auto overflow-x-hidden bg-white">
+<!-- Top Decorative Bar -->
+<div class="w-full h-3 bg-gov-green absolute top-0 left-0 z-20"></div>
+<div class="w-full h-1 bg-gov-blue absolute top-3 left-0 z-20 opacity-80"></div>
+<!-- Header Section -->
+<header class="pt-10 px-16 pb-4 flex justify-between items-end border-b border-gray-200 bg-white relative z-20">
+<div>
+<h2 class="text-sm font-bold tracking-[0.2em] text-gov-green uppercase mb-2">Challan Monitoring System</h2>
+<h1 class="text-5xl font-bold text-gov-blue relative inline-block">
+                Roles &amp; Permissions
+                <span class="absolute -bottom-2 left-0 w-1/3 h-1.5 bg-yellow-500 rounded-full"></span>
+</h1>
+</div>
+<div class="flex items-center opacity-80">
+<div class="text-right mr-4">
+<p class="text-xs text-gray-500 font-bold uppercase">Abbottabad</p>
+<p class="text-sm font-bold text-gov-blue">Sessions Courts</p>
+</div>
+<i class="fas fa-users-gear text-3xl text-gov-green"></i>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="flex-1 w-full relative z-10 p-8 px-16 flex flex-col justify-center">
+<!-- Table Container -->
+<div class="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden w-full">
+<table class="w-full border-collapse">
+<thead>
+<tr class="bg-gov-blue text-white">
+<th class="py-4 px-6 text-left w-1/4 font-playfair text-lg">Stakeholder Role</th>
+<th class="py-4 px-6 text-left w-1/2 font-playfair text-lg">Key Responsibilities &amp; Permissions</th>
+<th class="py-4 px-6 text-left w-1/4 font-playfair text-lg">System Access</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-gray-200">
+<!-- Police Station -->
+<tr class="role-row bg-white">
+<td class="py-4 px-6">
+<div class="flex items-center">
+<div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mr-4 border border-blue-200">
+<i class="fas fa-building-shield text-gov-blue"></i>
+</div>
+<div>
+<p class="font-bold text-gray-800">Police Station</p>
+<p class="text-xs text-gray-500">IOs / SHO</p>
+</div>
+</div>
+</td>
+<td class="py-4 px-6">
+<ul class="text-sm text-gray-700 space-y-1">
+<li class="flex items-center"><i class="fas fa-check text-green-500 text-xs mr-2"></i> Register FIR &amp; Initiate Challan</li>
+<li class="flex items-center"><i class="fas fa-check text-green-500 text-xs mr-2"></i> Send digital copy to DPP</li>
+<li class="flex items-center"><i class="fas fa-check text-green-500 text-xs mr-2"></i> View status of own station's FIRs</li>
+</ul>
+</td>
+<td class="py-4 px-6">
+<span class="bg-blue-100 text-gov-blue px-3 py-1 rounded-full text-xs font-bold border border-blue-200">Data Entry</span>
+</td>
+</tr>
+<!-- DPP -->
+<tr class="role-row bg-gray-50">
+<td class="py-4 px-6">
+<div class="flex items-center">
+<div class="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center mr-4 border border-indigo-200">
+<i class="fas fa-scale-balanced text-indigo-700"></i>
+</div>
+<div>
+<p class="font-bold text-gray-800">DPP Office</p>
+<p class="text-xs text-gray-500">Public Prosecutor</p>
+</div>
+</div>
+</td>
+<td class="py-4 px-6">
+<ul class="text-sm text-gray-700 space-y-1">
+<li class="flex items-center"><i class="fas fa-check text-green-500 text-xs mr-2"></i> Scrutinize &amp; Verify Challan</li>
+<li class="flex items-center"><i class="fas fa-check text-green-500 text-xs mr-2"></i> Return to Police (Objection)</li>
+<li class="flex items-center"><i class="fas fa-check text-green-500 text-xs mr-2"></i> Forward to Court Clerk with remarks</li>
+</ul>
+</td>
+<td class="py-4 px-6">
+<span class="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-xs font-bold border border-indigo-200">Verification</span>
+</td>
+</tr>
+<!-- Junior Clerk -->
+<tr class="role-row bg-white">
+<td class="py-4 px-6">
+<div class="flex items-center">
+<div class="w-10 h-10 rounded-full bg-yellow-100 flex items-center justify-center mr-4 border border-yellow-200">
+<i class="fas fa-file-signature text-yellow-700"></i>
+</div>
+<div>
+<p class="font-bold text-gray-800">Junior Clerk</p>
+<p class="text-xs text-gray-500">Court Staff</p>
+</div>
+</div>
+</td>
+<td class="py-4 px-6">
+<ul class="text-sm text-gray-700 space-y-1">
+<li class="flex items-center"><i class="fas fa-check text-green-500 text-xs mr-2"></i> Mark final Court Submission</li>
+<li class="flex items-center"><i class="fas fa-check text-green-500 text-xs mr-2"></i> Link to Case Management System</li>
+<li class="flex items-center"><i class="fas fa-check text-green-500 text-xs mr-2"></i> Maintain Court Diary linkage</li>
+</ul>
+</td>
+<td class="py-4 px-6">
+<span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-xs font-bold border border-yellow-200">Submission</span>
+</td>
+</tr>
+<!-- Central Jail -->
+<tr class="role-row bg-gray-50">
+<td class="py-4 px-6">
+<div class="flex items-center">
+<div class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center mr-4 border border-red-200">
+<i class="fas fa-lock text-red-700"></i>
+</div>
+<div>
+<p class="font-bold text-gray-800">Central Jail</p>
+<p class="text-xs text-gray-500">Jail Superintendent</p>
+</div>
+</div>
+</td>
+<td class="py-4 px-6">
+<ul class="text-sm text-gray-700 space-y-1">
+<li class="flex items-center"><i class="fas fa-check text-green-500 text-xs mr-2"></i> Verify UTP custody status</li>
+<li class="flex items-center"><i class="fas fa-check text-green-500 text-xs mr-2"></i> Flag high-priority UTP cases</li>
+<li class="flex items-center"><i class="fas fa-check text-green-500 text-xs mr-2"></i> Update prisoner movement status</li>
+</ul>
+</td>
+<td class="py-4 px-6">
+<span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-xs font-bold border border-red-200">Status Verification</span>
+</td>
+</tr>
+<!-- DSJ -->
+<tr class="role-row bg-white border-l-4 border-gov-green">
+<td class="py-4 px-6">
+<div class="flex items-center">
+<div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center mr-4 border border-gov-green">
+<i class="fas fa-landmark text-gov-green"></i>
+</div>
+<div>
+<p class="font-bold text-gov-green">DSJ / Admin</p>
+<p class="text-xs text-gray-500">Session Judge</p>
+</div>
+</div>
+</td>
+<td class="py-4 px-6">
+<ul class="text-sm text-gray-700 space-y-1">
+<li class="flex items-center"><i class="fas fa-check text-gov-blue text-xs mr-2"></i> <strong>District-wide Dashboard Overview</strong></li>
+<li class="flex items-center"><i class="fas fa-check text-gov-blue text-xs mr-2"></i> Monitor UTPs &amp; Overdue Challans</li>
+<li class="flex items-center"><i class="fas fa-check text-gov-blue text-xs mr-2"></i> Add/Remove Police Stations &amp; Courts</li>
+</ul>
+</td>
+<td class="py-4 px-6">
+<span class="bg-gov-green text-white px-3 py-1 rounded-full text-xs font-bold shadow-sm">Super Admin</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</main>
+<!-- Footer -->
+<div class="h-12 w-full bg-white border-t border-gray-200 flex items-center justify-between px-16 relative z-20">
+<p class="text-xs text-gray-400">Challan Monitoring &amp; Information System</p>
+<div class="flex items-center gap-2">
+<span class="h-1.5 w-1.5 rounded-full bg-gray-300"></span>
+<span class="h-1.5 w-1.5 rounded-full bg-gray-300"></span>
+<span class="h-1.5 w-1.5 rounded-full bg-gray-300"></span>
+<span class="h-1.5 w-1.5 rounded-full bg-gov-green"></span>
+<p class="text-xs font-bold text-gov-blue ml-2">Page 06</p>
+</div>
+</div>
+<!-- Background Decorative Element -->
+<div class="absolute bottom-0 right-0 w-1/3 h-full z-0 pointer-events-none opacity-5">
+<i class="fas fa-layer-group text-[300px] text-gov-blue absolute -bottom-10 -right-10"></i>
+</div>
+</body>
+</html><br><br> <hr> <br> <br>
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>UTP Priority Tracking</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&amp;family=Open+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f8fafc;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+        }
+        /* Custom Colors based on Pakistan Government themes */
+        .bg-gov-green { background-color: #115740; }
+        .bg-gov-blue { background-color: #002F6C; }
+        .text-gov-green { color: #115740; }
+        .text-gov-blue { color: #002F6C; }
+        .border-gov-blue { border-color: #002F6C; }
+        .border-gov-green { border-color: #115740; }
+        .bg-blue-light { background-color: #e6f0fa; }
+    </style>
+</head>
+<body class="w-full min-h-screen overflow-y-auto overflow-x-hidden bg-white">
+<!-- Top Decorative Bar -->
+<div class="w-full h-3 bg-gov-green absolute top-0 left-0 z-20"></div>
+<div class="w-full h-1 bg-gov-blue absolute top-3 left-0 z-20 opacity-80"></div>
+<!-- Header Section -->
+<header class="pt-12 px-16 pb-6 flex justify-between items-end border-b border-gray-200">
+<div>
+<h2 class="text-sm font-bold tracking-[0.2em] text-gov-green uppercase mb-2">Challan Monitoring System</h2>
+<h1 class="text-5xl font-bold text-gov-blue relative inline-block">
+                UTP Priority Tracking
+                <span class="absolute -bottom-2 left-0 w-1/3 h-1.5 bg-yellow-500 rounded-full"></span>
+</h1>
+</div>
+<div class="flex items-center opacity-80">
+<div class="text-right mr-4">
+<p class="text-xs text-gray-500 font-bold uppercase">Abbottabad</p>
+<p class="text-sm font-bold text-gov-blue">Sessions Courts</p>
+</div>
+<i class="fas fa-gavel text-3xl text-gov-green"></i>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="flex-1 px-16 py-8 flex gap-12 relative z-10">
+<!-- Left Column: Key Concepts -->
+<div class="flex-1 flex flex-col justify-center space-y-5">
+<!-- Item 1 -->
+<div class="flex items-start p-4 rounded-lg bg-white shadow-sm border-l-4 border-gov-blue hover:shadow-md transition-shadow duration-300">
+<div class="flex-shrink-0 w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center mr-5 mt-1">
+<i class="fas fa-scale-balanced text-xl text-gov-blue"></i>
+</div>
+<div class="flex-1">
+<h3 class="text-xl font-bold text-gray-800 mb-1">Legal Mandate &amp; Urgency</h3>
+<p class="text-gray-600 leading-relaxed text-sm">UTP cases are legally time-sensitive. Delays in challan submission violate constitutional rights, necessitating absolute priority in processing.</p>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex items-start p-4 rounded-lg bg-white shadow-sm border-l-4 border-gov-green hover:shadow-md transition-shadow duration-300">
+<div class="flex-shrink-0 w-12 h-12 bg-green-50 rounded-full flex items-center justify-center mr-5 mt-1">
+<i class="fas fa-robot text-xl text-gov-green"></i>
+</div>
+<div class="flex-1">
+<h3 class="text-xl font-bold text-gray-800 mb-1">Automated Flagging</h3>
+<p class="text-gray-600 leading-relaxed text-sm">The system auto-detects UTP status from FIR data. High-priority cases are flagged instantly for all stakeholders (Police, DPP, Courts).</p>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="flex items-start p-4 rounded-lg bg-white shadow-sm border-l-4 border-gray-600 hover:shadow-md transition-shadow duration-300">
+<div class="flex-shrink-0 w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mr-5 mt-1">
+<i class="fas fa-user-shield text-xl text-gray-700"></i>
+</div>
+<div class="flex-1">
+<h3 class="text-xl font-bold text-gray-800 mb-1">Judicial Action</h3>
+<p class="text-gray-600 leading-relaxed text-sm">District &amp; Sessions Judge (DSJ) can take immediate administrative action on "Red" alerts to resolve bottlenecks and ensure justice.</p>
+</div>
+</div>
+</div>
+<!-- Right Column: The Color Code Legend -->
+<div class="w-[380px] flex flex-col justify-center gap-4">
+<h3 class="text-lg font-bold text-gray-700 uppercase tracking-wider mb-1 border-b pb-2">Priority Status Indicators</h3>
+<!-- Red Card -->
+<div class="bg-red-50 p-4 rounded-xl border border-red-200 flex items-center shadow-sm relative overflow-hidden group">
+<div class="absolute right-0 top-0 h-full w-2 bg-red-500"></div>
+<div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mr-4 text-red-600">
+<i class="fas fa-triangle-exclamation text-xl"></i>
+</div>
+<div>
+<h4 class="text-lg font-bold text-red-700">Red Alert</h4>
+<p class="text-sm text-red-600 font-semibold">UTP &amp; Overdue</p>
+<p class="text-xs text-red-500 mt-1">Immediate Action Required</p>
+</div>
+</div>
+<!-- Yellow Card -->
+<div class="bg-yellow-50 p-4 rounded-xl border border-yellow-200 flex items-center shadow-sm relative overflow-hidden">
+<div class="absolute right-0 top-0 h-full w-2 bg-yellow-400"></div>
+<div class="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center mr-4 text-yellow-600">
+<i class="fas fa-hourglass-half text-xl"></i>
+</div>
+<div>
+<h4 class="text-lg font-bold text-yellow-700">Yellow Warning</h4>
+<p class="text-sm text-yellow-600 font-semibold">Nearing Deadline</p>
+<p class="text-xs text-yellow-500 mt-1">Expedite Submission</p>
+</div>
+</div>
+<!-- Green Card -->
+<div class="bg-green-50 p-4 rounded-xl border border-green-200 flex items-center shadow-sm relative overflow-hidden">
+<div class="absolute right-0 top-0 h-full w-2 bg-green-500"></div>
+<div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4 text-green-600">
+<i class="fas fa-check-circle text-xl"></i>
+</div>
+<div>
+<h4 class="text-lg font-bold text-green-700">Green Status</h4>
+<p class="text-sm text-green-600 font-semibold">On Time</p>
+<p class="text-xs text-green-500 mt-1">Within Legal Timeline</p>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<div class="h-12 w-full bg-white border-t border-gray-200 flex items-center justify-between px-16 relative z-20">
+<p class="text-xs text-gray-400">Challan Monitoring &amp; Information System</p>
+<div class="flex items-center gap-2">
+<span class="h-1.5 w-1.5 rounded-full bg-gray-300"></span>
+<span class="h-1.5 w-1.5 rounded-full bg-gray-300"></span>
+<span class="h-1.5 w-1.5 rounded-full bg-gov-green"></span>
+<span class="h-1.5 w-1.5 rounded-full bg-gray-300"></span>
+<p class="text-xs font-bold text-gov-blue ml-2">Page 07</p>
+</div>
+</div>
+<!-- Background Decorative Element -->
+<div class="absolute bottom-0 right-0 w-1/3 h-full z-0 pointer-events-none opacity-5">
+<svg viewbox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+<path d="M45.7,-76.3C58.9,-69.3,69.1,-58.3,77.3,-46.3C85.5,-34.3,91.7,-21.3,90.3,-8.8C88.9,3.7,79.9,15.7,70.8,26.4C61.7,37.1,52.5,46.5,41.9,53.8C31.3,61.1,19.3,66.3,6.3,68.3C-6.7,70.4,-20.7,69.3,-33.5,63.9C-46.3,58.5,-57.9,48.8,-66.6,37.1C-75.3,25.4,-81.1,11.7,-80.6,-1.7C-80.1,-15.1,-73.3,-28.2,-63.4,-38.7C-53.5,-49.2,-40.5,-57.1,-27.6,-64.3C-14.7,-71.5,-1.9,-78,12.5,-79.8C26.9,-81.6,53.8,-78.6,45.7,-76.3Z" fill="#002F6C" transform="translate(100 100)"></path>
+</svg>
+</div>
+</body>
+</html><br><br> <hr> <br> <br>
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Dashboard &amp; KPIs</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&amp;family=Open+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f8fafc;
+        }
+        h1, h2, h3, h4, h5 {
+            font-family: 'Playfair Display', serif;
+        }
+        /* Custom Colors */
+        .bg-gov-green { background-color: #115740; }
+        .bg-gov-blue { background-color: #002F6C; }
+        .text-gov-green { color: #115740; }
+        .text-gov-blue { color: #002F6C; }
+        .border-gov-blue { border-color: #002F6C; }
+        .border-gov-green { border-color: #115740; }
+        
+        /* Card Styles */
+        .kpi-card {
+            transition: all 0.3s ease;
+        }
+        .kpi-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="w-full min-h-screen overflow-y-auto overflow-x-hidden bg-white">
+<!-- Top Decorative Bar -->
+<div class="w-full h-3 bg-gov-green absolute top-0 left-0 z-20"></div>
+<div class="w-full h-1 bg-gov-blue absolute top-3 left-0 z-20 opacity-80"></div>
+<!-- Header Section -->
+<header class="pt-8 px-12 pb-2 flex justify-between items-end border-b border-gray-200 bg-white relative z-20">
+<div>
+<h2 class="text-xs font-bold tracking-[0.2em] text-gov-green uppercase mb-1">Challan Monitoring System</h2>
+<h1 class="text-4xl font-bold text-gov-blue relative inline-block">
+                Dashboard &amp; Analytics
+                <span class="absolute -bottom-2 left-0 w-1/3 h-1 bg-yellow-500 rounded-full"></span>
+</h1>
+</div>
+<div class="flex items-center gap-4">
+<div class="bg-red-50 border border-red-200 px-3 py-1 rounded-full flex items-center animate-pulse">
+<div class="w-2 h-2 bg-red-500 rounded-full mr-2"></div>
+<span class="text-xs font-bold text-red-700 uppercase">Live Updates</span>
+</div>
+<div class="text-right border-l pl-4 border-gray-300">
+<p class="text-xs text-gray-500 font-bold uppercase">District Status</p>
+<p class="text-sm font-bold text-gov-blue">Abbottabad</p>
+</div>
+</div>
+</header>
+<!-- Main Content Grid -->
+<main class="flex-1 w-full relative z-10 p-6 px-12 bg-gray-50">
+<!-- Top Metrics Row -->
+<div class="grid grid-cols-4 gap-6 mb-6">
+<!-- Metric 1: FIR to DPP Delay -->
+<div class="kpi-card bg-white p-4 rounded-xl shadow-sm border-l-4 border-yellow-500 flex items-center justify-between">
+<div>
+<p class="text-xs font-bold text-gray-500 uppercase tracking-wide">Avg. Delay (FIR to DPP)</p>
+<div class="flex items-baseline mt-1">
+<h3 class="text-3xl font-bold text-gray-800">4.2</h3>
+<span class="text-sm text-gray-500 ml-1">Days</span>
+</div>
+<p class="text-xs text-red-500 mt-1"><i class="fas fa-arrow-up mr-1"></i>12% vs last month</p>
+</div>
+<div class="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center">
+<i class="fas fa-stopwatch text-yellow-600 text-xl"></i>
+</div>
+</div>
+<!-- Metric 2: DPP to Court Delay -->
+<div class="kpi-card bg-white p-4 rounded-xl shadow-sm border-l-4 border-gov-blue flex items-center justify-between">
+<div>
+<p class="text-xs font-bold text-gray-500 uppercase tracking-wide">Avg. Delay (DPP to Court)</p>
+<div class="flex items-baseline mt-1">
+<h3 class="text-3xl font-bold text-gray-800">1.8</h3>
+<span class="text-sm text-gray-500 ml-1">Days</span>
+</div>
+<p class="text-xs text-green-600 mt-1"><i class="fas fa-arrow-down mr-1"></i>On Track</p>
+</div>
+<div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+<i class="fas fa-arrow-right-arrow-left text-gov-blue text-xl"></i>
+</div>
+</div>
+<!-- Metric 3: Total Pending -->
+<div class="kpi-card bg-white p-4 rounded-xl shadow-sm border-l-4 border-red-500 flex items-center justify-between">
+<div>
+<p class="text-xs font-bold text-gray-500 uppercase tracking-wide">Total Overdue Challans</p>
+<div class="flex items-baseline mt-1">
+<h3 class="text-3xl font-bold text-gray-800">127</h3>
+<span class="text-sm text-gray-500 ml-1">Cases</span>
+</div>
+<p class="text-xs text-gray-400 mt-1">District Wide</p>
+</div>
+<div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center">
+<i class="fas fa-file-circle-exclamation text-red-600 text-xl"></i>
+</div>
+</div>
+<!-- Metric 4: UTP High Priority -->
+<div class="kpi-card bg-red-50 p-4 rounded-xl shadow-sm border border-red-200 flex items-center justify-between">
+<div>
+<p class="text-xs font-bold text-red-600 uppercase tracking-wide">UTP Priority Cases</p>
+<div class="flex items-baseline mt-1">
+<h3 class="text-3xl font-bold text-red-700">18</h3>
+<span class="text-sm text-red-600 ml-1">Critical</span>
+</div>
+<p class="text-xs text-red-600 mt-1 font-bold">Requires Immediate Action</p>
+</div>
+<div class="w-12 h-12 bg-white rounded-full flex items-center justify-center border border-red-200">
+<i class="fas fa-lock text-red-600 text-xl"></i>
+</div>
+</div>
+</div>
+<!-- Charts Row -->
+<div class="grid grid-cols-12 gap-6 h-[380px]">
+<!-- Left Chart: Overdue Summary -->
+<div class="col-span-8 bg-white p-5 rounded-xl shadow-sm border border-gray-200 flex flex-col">
+<div class="flex justify-between items-center mb-4">
+<h4 class="font-bold text-gov-blue text-lg"><i class="fas fa-chart-column mr-2"></i>Challan Pendency by Police Station</h4>
+<select class="text-xs border border-gray-300 rounded px-2 py-1 bg-gray-50 text-gray-600">
+<option>Last 30 Days</option>
+<option>This Quarter</option>
+</select>
+</div>
+<div class="flex-1 relative w-full h-full">
+<canvas id="overdueChart"></canvas>
+</div>
+</div>
+<!-- Right Column: UTP Chart & Ranking -->
+<div class="col-span-4 flex flex-col gap-6">
+<!-- UTP Ratio -->
+<div class="bg-white p-5 rounded-xl shadow-sm border border-gray-200 flex-1 flex flex-col">
+<h4 class="font-bold text-gov-blue text-sm mb-2"><i class="fas fa-chart-pie mr-2"></i>Pending Challans Composition</h4>
+<div class="flex-1 relative flex items-center justify-center">
+<canvas id="utpChart"></canvas>
+</div>
+</div>
+<!-- Performance Table -->
+<div class="bg-white p-5 rounded-xl shadow-sm border border-gray-200 h-48 overflow-hidden">
+<h4 class="font-bold text-gov-green text-sm mb-3"><i class="fas fa-trophy mr-2"></i>Performance Index (Submission Time)</h4>
+<div class="overflow-y-auto h-full pb-4">
+<table class="w-full text-xs text-left">
+<thead class="text-gray-500 border-b">
+<tr>
+<th class="pb-2">Rank</th>
+<th class="pb-2">Station</th>
+<th class="pb-2 text-right">Avg Time</th>
+</tr>
+</thead>
+<tbody class="text-gray-700">
+<tr class="border-b border-gray-50">
+<td class="py-2"><span class="bg-green-100 text-green-700 px-1.5 rounded font-bold">1</span></td>
+<td class="py-2 font-semibold">PS City</td>
+<td class="py-2 text-right">1.2 Days</td>
+</tr>
+<tr class="border-b border-gray-50">
+<td class="py-2"><span class="bg-green-100 text-green-700 px-1.5 rounded font-bold">2</span></td>
+<td class="py-2 font-semibold">PS Mirpur</td>
+<td class="py-2 text-right">1.5 Days</td>
+</tr>
+<tr class="border-b border-gray-50">
+<td class="py-2"><span class="bg-red-100 text-red-700 px-1.5 rounded font-bold">9</span></td>
+<td class="py-2 font-semibold text-red-600">PS Cantt</td>
+<td class="py-2 text-right text-red-600">5.8 Days</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<div class="h-10 w-full bg-white border-t border-gray-200 flex items-center justify-between px-12 relative z-20">
+<p class="text-xs text-gray-400">Generated for DSJ Review - Data Confidential</p>
+<div class="flex items-center gap-2">
+<span class="h-1.5 w-1.5 rounded-full bg-gray-300"></span>
+<span class="h-1.5 w-1.5 rounded-full bg-gray-300"></span>
+<span class="h-1.5 w-1.5 rounded-full bg-gray-300"></span>
+<span class="h-1.5 w-1.5 rounded-full bg-gov-green"></span>
+<p class="text-xs font-bold text-gov-blue ml-2">Page 08</p>
+</div>
+</div>
+<!-- Chart Configuration -->
+<script>
+        // Overdue Bar Chart
+        const ctxOverdue = document.getElementById('overdueChart').getContext('2d');
+        new Chart(ctxOverdue, {
+            type: 'bar',
+            data: {
+                labels: ['PS Cantt', 'PS City', 'PS Mirpur', 'PS Havelian', 'PS Nawan Shehr', 'PS Lora'],
+                datasets: [{
+                    label: 'Pending Challans',
+                    data: [45, 12, 18, 32, 15, 5],
+                    backgroundColor: [
+                        '#EF4444', // Red for high
+                        '#115740',
+                        '#115740',
+                        '#F59E0B', // Yellow for medium
+                        '#115740',
+                        '#115740'
+                    ],
+                    borderRadius: 4,
+                    barThickness: 30
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        grid: { borderDash: [2, 2], drawBorder: false }
+                    },
+                    x: {
+                        grid: { display: false }
+                    }
+                }
+            }
+        });
+
+        // UTP Doughnut Chart
+        const ctxUtp = document.getElementById('utpChart').getContext('2d');
+        new Chart(ctxUtp, {
+            type: 'doughnut',
+            data: {
+                labels: ['Normal Cases', 'UTP (High Priority)'],
+                datasets: [{
+                    data: [109, 18],
+                    backgroundColor: ['#e2e8f0', '#DC2626'],
+                    borderWidth: 0,
+                    hoverOffset: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                cutout: '70%',
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: { boxWidth: 10, font: { size: 10 } }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html><br><br> <hr> <br> <br>
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Benefits to CJCC &amp; District</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&amp;family=Open+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f8fafc;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+        }
+        /* Custom Colors based on Pakistan Government themes */
+        .bg-gov-green { background-color: #115740; }
+        .bg-gov-blue { background-color: #002F6C; }
+        .text-gov-green { color: #115740; }
+        .text-gov-blue { color: #002F6C; }
+        .border-gov-blue { border-color: #002F6C; }
+        .border-gov-green { border-color: #115740; }
+        .bg-blue-light { background-color: #e6f0fa; }
+    </style>
+</head>
+<body class="w-full min-h-screen overflow-y-auto overflow-x-hidden bg-white">
+<!-- Top Decorative Bar -->
+<div class="w-full h-3 bg-gov-green absolute top-0 left-0 z-20"></div>
+<div class="w-full h-1 bg-gov-blue absolute top-3 left-0 z-20 opacity-80"></div>
+<!-- Header Section -->
+<header class="pt-10 px-16 pb-4 flex justify-between items-end border-b border-gray-200">
+<div>
+<h2 class="text-sm font-bold tracking-[0.2em] text-gov-green uppercase mb-2">Challan Monitoring System</h2>
+<h1 class="text-5xl font-bold text-gov-blue relative inline-block">
+                Benefits to CJCC &amp; District
+                <span class="absolute -bottom-2 left-0 w-1/3 h-1.5 bg-yellow-500 rounded-full"></span>
+</h1>
+</div>
+<div class="flex items-center opacity-80">
+<div class="text-right mr-4">
+<p class="text-xs text-gray-500 font-bold uppercase">Abbottabad</p>
+<p class="text-sm font-bold text-gov-blue">Sessions Courts</p>
+</div>
+<i class="fas fa-gavel text-3xl text-gov-green"></i>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="flex-1 px-16 py-8 flex gap-10 relative z-10">
+<!-- Left Column: Primary Benefits List -->
+<div class="flex-1 flex flex-col justify-center space-y-4">
+<!-- Benefit 1 -->
+<div class="flex items-center p-3 rounded-lg bg-white shadow-sm border-l-4 border-gov-blue hover:shadow-md transition-shadow duration-300">
+<div class="flex-shrink-0 w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center mr-4">
+<i class="fas fa-forward-fast text-lg text-gov-blue"></i>
+</div>
+<div class="flex-1">
+<h3 class="text-lg font-bold text-gray-800 mb-0.5">Faster Submission &amp; Reduced Backlog</h3>
+<p class="text-sm text-gray-600">Streamlined digital process accelerates challan submission, directly reducing case pendency.</p>
+</div>
+</div>
+<!-- Benefit 2 -->
+<div class="flex items-center p-3 rounded-lg bg-white shadow-sm border-l-4 border-gov-green hover:shadow-md transition-shadow duration-300">
+<div class="flex-shrink-0 w-10 h-10 bg-green-50 rounded-full flex items-center justify-center mr-4">
+<i class="fas fa-eye text-lg text-gov-green"></i>
+</div>
+<div class="flex-1">
+<h3 class="text-lg font-bold text-gray-800 mb-0.5">Real-time Oversight</h3>
+<p class="text-sm text-gray-600">DSJ and CJCC gain immediate visibility into the status of every FIR and submission timeline.</p>
+</div>
+</div>
+<!-- Benefit 3 -->
+<div class="flex items-center p-3 rounded-lg bg-white shadow-sm border-l-4 border-red-500 hover:shadow-md transition-shadow duration-300">
+<div class="flex-shrink-0 w-10 h-10 bg-red-50 rounded-full flex items-center justify-center mr-4">
+<i class="fas fa-scale-unbalanced text-lg text-red-600"></i>
+</div>
+<div class="flex-1">
+<h3 class="text-lg font-bold text-gray-800 mb-0.5">Focus on UTP Cases</h3>
+<p class="text-sm text-gray-600">Automated prioritization ensures administrative focus remains on critical Under Trial Prisoner rights.</p>
+</div>
+</div>
+<!-- Benefit 4 -->
+<div class="flex items-center p-3 rounded-lg bg-white shadow-sm border-l-4 border-gov-blue hover:shadow-md transition-shadow duration-300">
+<div class="flex-shrink-0 w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center mr-4">
+<i class="fas fa-magnifying-glass-chart text-lg text-gov-blue"></i>
+</div>
+<div class="flex-1">
+<h3 class="text-lg font-bold text-gray-800 mb-0.5">Identify Process Bottlenecks</h3>
+<p class="text-sm text-gray-600">Instantly pinpoint whether delays are occurring at the Police Station or DPP office level.</p>
+</div>
+</div>
+<!-- Benefit 5 -->
+<div class="flex items-center p-3 rounded-lg bg-white shadow-sm border-l-4 border-gov-green hover:shadow-md transition-shadow duration-300">
+<div class="flex-shrink-0 w-10 h-10 bg-green-50 rounded-full flex items-center justify-center mr-4">
+<i class="fas fa-file-signature text-lg text-gov-green"></i>
+</div>
+<div class="flex-1">
+<h3 class="text-lg font-bold text-gray-800 mb-0.5">Accurate Reporting</h3>
+<p class="text-sm text-gray-600">Generate error-free statistical reports for High Court inspections and monthly meetings.</p>
+</div>
+</div>
+</div>
+<!-- Right Column: Secondary Objectives & Visual Context -->
+<div class="w-1/3 flex flex-col gap-5 pt-1">
+<!-- Context Block 1 -->
+<div class="bg-blue-light p-6 rounded-xl border border-blue-100 relative overflow-hidden flex-1 flex flex-col justify-center">
+<div class="absolute -right-6 -top-6 text-blue-100 opacity-50">
+<i class="fas fa-building-columns text-9xl"></i>
+</div>
+<div class="relative z-10">
+<div class="w-10 h-10 bg-gov-blue rounded flex items-center justify-center mb-3">
+<i class="fas fa-seedling text-white"></i>
+</div>
+<h3 class="text-lg font-bold text-gov-blue mb-2">District Efficiency</h3>
+<p class="text-sm text-gray-700 leading-relaxed">Transforming the judicial process from manual dependency to digital efficiency, creating a model for other districts.</p>
+</div>
+</div>
+<!-- Context Block 2 -->
+<div class="bg-gray-50 p-6 rounded-xl border border-gray-200 relative overflow-hidden flex-1 flex flex-col justify-center">
+<div class="absolute -right-4 -bottom-4 text-gray-200 opacity-50">
+<i class="fas fa-clipboard-check text-8xl"></i>
+</div>
+<div class="relative z-10">
+<div class="w-10 h-10 bg-gov-green rounded flex items-center justify-center mb-3">
+<i class="fas fa-hand-holding-dollar text-white"></i>
+</div>
+<h3 class="text-lg font-bold text-gov-green mb-2">Accountability</h3>
+<p class="text-sm text-gray-700 leading-relaxed">Establish a transparent system where every delay is recorded, fostering a culture of accountability among all stakeholders.</p>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<div class="h-12 w-full bg-white border-t border-gray-200 flex items-center justify-between px-16 relative z-20">
+<p class="text-xs text-gray-400">Challan Monitoring &amp; Information System - Abbottabad</p>
+<div class="flex items-center gap-2">
+<span class="h-1.5 w-1.5 rounded-full bg-gray-300"></span>
+<span class="h-1.5 w-1.5 rounded-full bg-gray-300"></span>
+<span class="h-1.5 w-1.5 rounded-full bg-gray-300"></span>
+<span class="h-1.5 w-1.5 rounded-full bg-gov-green"></span>
+<span class="h-1.5 w-1.5 rounded-full bg-gray-300"></span>
+<p class="text-xs font-bold text-gov-blue ml-2">Page 09</p>
+</div>
+</div>
+<!-- Background Decorative Element -->
+<div class="absolute bottom-0 right-0 w-1/3 h-full z-0 pointer-events-none opacity-5">
+<svg viewbox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+<path d="M45.7,-76.3C58.9,-69.3,69.1,-58.3,77.3,-46.3C85.5,-34.3,91.7,-21.3,90.3,-8.8C88.9,3.7,79.9,15.7,70.8,26.4C61.7,37.1,52.5,46.5,41.9,53.8C31.3,61.1,19.3,66.3,6.3,68.3C-6.7,70.4,-20.7,69.3,-33.5,63.9C-46.3,58.5,-57.9,48.8,-66.6,37.1C-75.3,25.4,-81.1,11.7,-80.6,-1.7C-80.1,-15.1,-73.3,-28.2,-63.4,-38.7C-53.5,-49.2,-40.5,-57.1,-27.6,-64.3C-14.7,-71.5,-1.9,-78,12.5,-79.8C26.9,-81.6,53.8,-78.6,45.7,-76.3Z" fill="#002F6C" transform="translate(100 100)"></path>
+</svg>
+</div>
+</body>
+</html><br><br> <hr> <br> <br>
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Implementation Plan</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&amp;family=Open+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f8fafc;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+        }
+        /* Custom Colors based on Pakistan Government themes */
+        .bg-gov-green { background-color: #115740; }
+        .bg-gov-blue { background-color: #002F6C; }
+        .text-gov-green { color: #115740; }
+        .text-gov-blue { color: #002F6C; }
+        .border-gov-blue { border-color: #002F6C; }
+        .border-gov-green { border-color: #115740; }
+        
+        /* Timeline styling */
+        .timeline-line {
+            height: 4px;
+            background: #e2e8f0;
+            width: 100%;
+            position: absolute;
+            top: 40px;
+            left: 0;
+            z-index: 0;
+        }
+        .timeline-progress {
+            height: 4px;
+            background: #002F6C;
+            width: 45%; /* Adjust based on progress */
+            position: absolute;
+            top: 40px;
+            left: 0;
+            z-index: 1;
+        }
+        .phase-card {
+            transition: all 0.3s ease;
+        }
+        .phase-card:hover {
+            transform: translateY(-5px);
+        }
+        .phase-point {
+            transition: all 0.3s ease;
+        }
+        .phase-card:hover .phase-point {
+            transform: scale(1.2);
+            box-shadow: 0 0 0 4px rgba(17, 87, 64, 0.2);
+        }
+    </style>
+</head>
+<body class="w-full min-h-screen overflow-y-auto overflow-x-hidden bg-white">
+<!-- Top Decorative Bar -->
+<div class="w-full h-3 bg-gov-green absolute top-0 left-0 z-20"></div>
+<div class="w-full h-1 bg-gov-blue absolute top-3 left-0 z-20 opacity-80"></div>
+<!-- Header Section -->
+<header class="pt-10 px-16 pb-4 flex justify-between items-end border-b border-gray-200 bg-white relative z-20">
+<div>
+<h2 class="text-sm font-bold tracking-[0.2em] text-gov-green uppercase mb-2">Challan Monitoring System</h2>
+<h1 class="text-5xl font-bold text-gov-blue relative inline-block">
+                Implementation Plan
+                <span class="absolute -bottom-2 left-0 w-1/3 h-1.5 bg-yellow-500 rounded-full"></span>
+</h1>
+</div>
+<div class="flex items-center opacity-80">
+<div class="text-right mr-4">
+<p class="text-xs text-gray-500 font-bold uppercase">Abbottabad</p>
+<p class="text-sm font-bold text-gov-blue">Sessions Courts</p>
+</div>
+<i class="fas fa-road text-3xl text-gov-green"></i>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="flex-1 w-full relative z-10 px-12 py-12 flex flex-col justify-center">
+<!-- Timeline Container -->
+<div class="relative w-full px-4">
+<!-- Horizontal Line Background -->
+<div class="timeline-line"></div>
+<!-- Progress Overlay (Optional, showing active stages) -->
+<div class="timeline-progress" style="width: 35%;"></div>
+<!-- Phases Grid -->
+<div class="grid grid-cols-5 gap-4 relative z-10">
+<!-- Phase 1: Development -->
+<div class="phase-card flex flex-col items-center group">
+<!-- Connector Point -->
+<div class="phase-point w-6 h-6 rounded-full border-4 border-white bg-gov-blue shadow-md mb-8 relative z-20 mt-[28px]"></div>
+<!-- Content Card -->
+<div class="bg-blue-50 w-full p-4 rounded-lg border-t-4 border-gov-blue shadow-md h-64 flex flex-col">
+<div class="mb-3 text-center">
+<span class="bg-blue-200 text-gov-blue text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider">Phase 01</span>
+</div>
+<div class="flex justify-center mb-3">
+<div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm">
+<i class="fas fa-code text-gov-blue text-lg"></i>
+</div>
+</div>
+<h3 class="font-bold text-gray-800 text-center mb-2 text-sm">Development &amp; Testing</h3>
+<p class="text-xs text-gray-600 text-center flex-1 leading-relaxed">
+                            System architecture setup, Alpha/Beta testing with dummy data, and security audit.
+                        </p>
+<div class="mt-2 pt-2 border-t border-blue-200 text-center">
+<p class="text-[10px] font-bold text-gov-blue">Status: Completed</p>
+</div>
+</div>
+</div>
+<!-- Phase 2: Training -->
+<div class="phase-card flex flex-col items-center group">
+<!-- Connector Point -->
+<div class="phase-point w-6 h-6 rounded-full border-4 border-white bg-gov-blue shadow-md mb-8 relative z-20 mt-[28px]"></div>
+<!-- Content Card -->
+<div class="bg-white w-full p-4 rounded-lg border-t-4 border-gov-blue shadow-md h-64 flex flex-col">
+<div class="mb-3 text-center">
+<span class="bg-blue-100 text-gov-blue text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider">Phase 02</span>
+</div>
+<div class="flex justify-center mb-3">
+<div class="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center shadow-sm">
+<i class="fas fa-chalkboard-user text-gov-blue text-lg"></i>
+</div>
+</div>
+<h3 class="font-bold text-gray-800 text-center mb-2 text-sm">User Training</h3>
+<p class="text-xs text-gray-600 text-center flex-1 leading-relaxed">
+                            Hands-on workshops for Police IOs, DPP staff, Court Clerks, and Central Jail operators.
+                        </p>
+<div class="mt-2 pt-2 border-t border-gray-100 text-center">
+<p class="text-[10px] font-bold text-yellow-600">Status: In Progress</p>
+</div>
+</div>
+</div>
+<!-- Phase 3: Pilot -->
+<div class="phase-card flex flex-col items-center group">
+<!-- Connector Point (Current Active) -->
+<div class="phase-point w-8 h-8 rounded-full border-4 border-white bg-yellow-500 shadow-lg mb-7 relative z-20 mt-[24px]"></div>
+<!-- Content Card -->
+<div class="bg-white w-full p-4 rounded-lg border-t-4 border-yellow-500 shadow-xl transform scale-105 h-64 flex flex-col relative">
+<div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-yellow-500 text-white text-[9px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
+                            Current Stage
+                        </div>
+<div class="mb-3 mt-2 text-center">
+<span class="bg-yellow-100 text-yellow-800 text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider">Phase 03</span>
+</div>
+<div class="flex justify-center mb-3">
+<div class="w-12 h-12 bg-yellow-50 rounded-full flex items-center justify-center shadow-sm">
+<i class="fas fa-rocket text-yellow-600 text-lg"></i>
+</div>
+</div>
+<h3 class="font-bold text-gray-800 text-center mb-2 text-sm">Pilot Phase</h3>
+<p class="text-xs text-gray-600 text-center flex-1 leading-relaxed">
+                            Live run in Abbottabad City PS &amp; Sessions Court. Real-world data entry monitoring.
+                        </p>
+<div class="mt-2 pt-2 border-t border-gray-100 text-center">
+<p class="text-[10px] font-bold text-gov-blue">Timeline: 2 Weeks</p>
+</div>
+</div>
+</div>
+<!-- Phase 4: Feedback -->
+<div class="phase-card flex flex-col items-center group">
+<!-- Connector Point -->
+<div class="phase-point w-6 h-6 rounded-full border-4 border-white bg-gray-300 shadow-md mb-8 relative z-20 mt-[28px]"></div>
+<!-- Content Card -->
+<div class="bg-white w-full p-4 rounded-lg border-t-4 border-gray-300 shadow-sm opacity-90 h-64 flex flex-col">
+<div class="mb-3 text-center">
+<span class="bg-gray-100 text-gray-600 text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider">Phase 04</span>
+</div>
+<div class="flex justify-center mb-3">
+<div class="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center shadow-sm">
+<i class="fas fa-comments text-gray-500 text-lg"></i>
+</div>
+</div>
+<h3 class="font-bold text-gray-800 text-center mb-2 text-sm">Feedback &amp; Refinement</h3>
+<p class="text-xs text-gray-600 text-center flex-1 leading-relaxed">
+                            Gather stakeholder feedback, fix bugs, and finalize Standard Operating Procedures (SOPs).
+                        </p>
+<div class="mt-2 pt-2 border-t border-gray-100 text-center">
+<p class="text-[10px] font-bold text-gray-400">Upcoming</p>
+</div>
+</div>
+</div>
+<!-- Phase 5: Rollout -->
+<div class="phase-card flex flex-col items-center group">
+<!-- Connector Point -->
+<div class="phase-point w-6 h-6 rounded-full border-4 border-white bg-gov-green shadow-md mb-8 relative z-20 mt-[28px]"></div>
+<!-- Content Card -->
+<div class="bg-green-50 w-full p-4 rounded-lg border-t-4 border-gov-green shadow-md opacity-90 h-64 flex flex-col">
+<div class="mb-3 text-center">
+<span class="bg-green-100 text-gov-green text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider">Phase 05</span>
+</div>
+<div class="flex justify-center mb-3">
+<div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm">
+<i class="fas fa-map-location-dot text-gov-green text-lg"></i>
+</div>
+</div>
+<h3 class="font-bold text-gray-800 text-center mb-2 text-sm">District Rollout</h3>
+<p class="text-xs text-gray-600 text-center flex-1 leading-relaxed">
+                            Full deployment across all Police Stations and Courts in Abbottabad District.
+                        </p>
+<div class="mt-2 pt-2 border-t border-green-200 text-center">
+<p class="text-[10px] font-bold text-gov-green">Target: Q2 2026</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<div class="h-12 w-full bg-white border-t border-gray-200 flex items-center justify-between px-16 relative z-20">
+<p class="text-xs text-gray-400">Challan Monitoring &amp; Information System</p>
+<div class="flex items-center gap-2">
+<span class="h-1.5 w-1.5 rounded-full bg-gray-300"></span>
+<span class="h-1.5 w-1.5 rounded-full bg-gray-300"></span>
+<span class="h-1.5 w-1.5 rounded-full bg-gray-300"></span>
+<span class="h-1.5 w-1.5 rounded-full bg-gray-300"></span>
+<p class="text-xs font-bold text-gov-blue ml-2">Page 10</p>
+</div>
+</div>
+<!-- Background Decorative Element -->
+<div class="absolute bottom-0 right-0 w-1/3 h-full z-0 pointer-events-none opacity-5">
+<i class="fas fa-tasks text-[300px] text-gov-green absolute -bottom-10 -right-10"></i>
+</div>
+</body>
+</html><br><br> <hr> <br> <br>
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Conclusion</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&amp;family=Open+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f8fafc;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+        }
+        /* Custom Colors based on Pakistan Government themes */
+        .bg-gov-green { background-color: #115740; }
+        .bg-gov-blue { background-color: #002F6C; }
+        .text-gov-green { color: #115740; }
+        .text-gov-blue { color: #002F6C; }
+        .border-gov-blue { border-color: #002F6C; }
+        .border-gov-green { border-color: #115740; }
+        .bg-blue-light { background-color: #e6f0fa; }
+        .bg-green-light { background-color: #f0fdf4; }
+    </style>
+</head>
+<body class="w-full min-h-screen overflow-y-auto overflow-x-hidden bg-white">
+<!-- Top Decorative Bar -->
+<div class="w-full h-3 bg-gov-green absolute top-0 left-0 z-20"></div>
+<div class="w-full h-1 bg-gov-blue absolute top-3 left-0 z-20 opacity-80"></div>
+<!-- Header Section -->
+<header class="pt-12 px-16 pb-4 flex justify-between items-end border-b border-gray-200">
+<div>
+<h2 class="text-sm font-bold tracking-[0.2em] text-gov-green uppercase mb-2">Challan Monitoring System</h2>
+<h1 class="text-5xl font-bold text-gov-blue relative inline-block">
+                Conclusion
+                <span class="absolute -bottom-2 left-0 w-1/3 h-1.5 bg-yellow-500 rounded-full"></span>
+</h1>
+</div>
+<div class="flex items-center opacity-80">
+<div class="text-right mr-4">
+<p class="text-xs text-gray-500 font-bold uppercase">Abbottabad</p>
+<p class="text-sm font-bold text-gov-blue">Sessions Courts</p>
+</div>
+<i class="fas fa-clipboard-check text-3xl text-gov-green"></i>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="flex-1 px-16 py-8 flex gap-10 relative z-10">
+<!-- Left Column: Key Benefits List -->
+<div class="flex-1 flex flex-col justify-center space-y-4">
+<!-- Benefit 1 -->
+<div class="flex items-start p-3 rounded-lg bg-white shadow-sm border-l-4 border-gov-blue hover:shadow-md transition-shadow duration-300">
+<div class="flex-shrink-0 w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center mr-4 mt-1">
+<i class="fas fa-route text-lg text-gov-blue"></i>
+</div>
+<div class="flex-1">
+<h3 class="text-lg font-bold text-gray-800 mb-1">Real-time FIR Tracking</h3>
+<p class="text-sm text-gray-600 leading-relaxed">Complete digital visibility of the challan journey from Police Station to Court, eliminating manual follow-ups.</p>
+</div>
+</div>
+<!-- Benefit 2 -->
+<div class="flex items-start p-3 rounded-lg bg-white shadow-sm border-l-4 border-red-500 hover:shadow-md transition-shadow duration-300">
+<div class="flex-shrink-0 w-10 h-10 bg-red-50 rounded-full flex items-center justify-center mr-4 mt-1">
+<i class="fas fa-clock text-lg text-red-600"></i>
+</div>
+<div class="flex-1">
+<h3 class="text-lg font-bold text-gray-800 mb-1">UTP Priority Monitoring</h3>
+<p class="text-sm text-gray-600 leading-relaxed">Automated alerts and color-coded flags ensure Under Trial Prisoner cases are prioritized to meet legal deadlines.</p>
+</div>
+</div>
+<!-- Benefit 3 -->
+<div class="flex items-start p-3 rounded-lg bg-white shadow-sm border-l-4 border-gov-green hover:shadow-md transition-shadow duration-300">
+<div class="flex-shrink-0 w-10 h-10 bg-green-50 rounded-full flex items-center justify-center mr-4 mt-1">
+<i class="fas fa-eye text-lg text-gov-green"></i>
+</div>
+<div class="flex-1">
+<h3 class="text-lg font-bold text-gray-800 mb-1">Transparent &amp; Accountable</h3>
+<p class="text-sm text-gray-600 leading-relaxed">Role-based logging creates a transparent system where bottlenecks are easily identified and accountability is enforced.</p>
+</div>
+</div>
+<!-- Benefit 4 -->
+<div class="flex items-start p-3 rounded-lg bg-white shadow-sm border-l-4 border-gov-blue hover:shadow-md transition-shadow duration-300">
+<div class="flex-shrink-0 w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center mr-4 mt-1">
+<i class="fas fa-gavel text-lg text-gov-blue"></i>
+</div>
+<div class="flex-1">
+<h3 class="text-lg font-bold text-gray-800 mb-1">CJCC &amp; DSJ Oversight</h3>
+<p class="text-sm text-gray-600 leading-relaxed">Empowers the District &amp; Sessions Judge and CJCC with data-driven insights for effective administrative control.</p>
+</div>
+</div>
+</div>
+<!-- Right Column: Visual Summary -->
+<div class="w-1/3 flex flex-col gap-5 pt-2">
+<!-- Main Impact Card -->
+<div class="bg-gov-blue p-6 rounded-xl relative overflow-hidden flex-1 flex flex-col justify-center text-white">
+<div class="absolute -right-8 -top-8 text-white opacity-10">
+<i class="fas fa-network-wired text-[150px]"></i>
+</div>
+<div class="relative z-10 text-center">
+<div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4 backdrop-filter backdrop-blur-sm">
+<i class="fas fa-check-double text-3xl text-white"></i>
+</div>
+<h3 class="text-2xl font-bold mb-3 font-serif">System Impact</h3>
+<p class="text-blue-100 text-sm leading-relaxed mb-4">Transforming judicial administration through digital efficiency and real-time intelligence.</p>
+<div class="inline-block px-4 py-1 border border-blue-300 rounded-full bg-blue-900 bg-opacity-30">
+<p class="text-xs font-semibold tracking-wider uppercase">Ready for Rollout</p>
+</div>
+</div>
+</div>
+<!-- Secondary Metric Card -->
+<div class="bg-green-light p-5 rounded-xl border border-green-200 flex items-center">
+<div class="w-12 h-12 bg-gov-green rounded-lg flex items-center justify-center mr-4 shadow-sm">
+<i class="fas fa-users text-xl text-white"></i>
+</div>
+<div>
+<p class="text-xs text-gov-green font-bold uppercase tracking-wider mb-1">Stakeholders</p>
+<p class="text-sm text-gray-700 font-semibold">Police • DPP • Courts • Jail</p>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<div class="h-12 w-full bg-white border-t border-gray-200 flex items-center justify-between px-16 relative z-20">
+<p class="text-xs text-gray-400">Challan Monitoring &amp; Information System</p>
+<div class="flex items-center gap-2">
+<span class="h-1.5 w-1.5 rounded-full bg-gray-300"></span>
+<span class="h-1.5 w-1.5 rounded-full bg-gray-300"></span>
+<span class="h-1.5 w-1.5 rounded-full bg-gray-300"></span>
+<span class="h-1.5 w-1.5 rounded-full bg-gov-green"></span>
+<p class="text-xs font-bold text-gov-blue ml-2">Page 11</p>
+</div>
+</div>
+<!-- Background Decorative Element -->
+<div class="absolute bottom-0 right-0 w-1/3 h-full z-0 pointer-events-none opacity-5">
+<svg viewbox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+<path d="M42.7,-72.3C54.9,-63.3,64.1,-52.3,72.3,-40.3C80.5,-28.3,87.7,-15.3,86.3,-2.8C84.9,9.7,74.9,21.7,65.8,32.4C56.7,43.1,48.5,52.5,37.9,59.8C27.3,67.1,14.3,72.3,1.3,70.3C-11.7,68.4,-24.7,59.3,-37.5,50.9C-50.3,42.5,-62.9,34.8,-71.6,23.1C-80.3,11.4,-85.1,-4.3,-82.6,-18.7C-80.1,-33.1,-70.3,-46.2,-58.4,-55.7C-46.5,-65.2,-32.5,-71.1,-18.6,-74.3C-4.7,-77.5,7.9,-78,12.5,-79.8C17.1,-81.6,30.5,-81.3,42.7,-72.3Z" fill="#115740" transform="translate(100 100)"></path>
+</svg>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
