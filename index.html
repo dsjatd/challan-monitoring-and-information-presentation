@@ -91,8 +91,8 @@
 <i class="far fa-calendar-alt text-gov-blue text-xl mr-3"></i>
 <p class="text-xs font-bold text-gray-400 uppercase tracking-wider">Date</p>
 </div>
-<p class="text-lg font-bold text-gray-800 leading-snug">January 10, 2026</p>
-<p class="text-sm text-gray-600">Saturday</p>
+<p class="text-lg font-bold text-gray-800 leading-snug">April 08, 2026</p>
+<p class="text-sm text-gray-600">Wednesday</p>
 </div>
 </div>
 </div>
@@ -529,8 +529,9 @@ document.getElementById("exportPPT").addEventListener("click", async () => {
 <h3 class="text-lg font-bold text-gov-blue mb-3">Role-Based Logins</h3>
 <ul class="space-y-3 text-sm text-gray-700 flex-1">
 <li class="flex items-center"><i class="fas fa-check text-gov-green mr-2"></i> Police Station (IOs/SHOs)</li>
+<li class="flex items-center"><i class="fas fa-check text-gov-green mr-2"></i> SP Investigation Office</li>
 <li class="flex items-center"><i class="fas fa-check text-gov-green mr-2"></i> District Public Prosecutor (DPP)</li>
-<li class="flex items-center"><i class="fas fa-check text-gov-green mr-2"></i> Magistrates &amp; Court Clerks</li>
+<li class="flex items-center"><i class="fas fa-check text-gov-green mr-2"></i> Magistrate Office</li>
 <li class="flex items-center"><i class="fas fa-check text-gov-green mr-2"></i> District &amp; Sessions Judge (DSJ)</li>
 </ul>
 </div>
@@ -544,7 +545,7 @@ document.getElementById("exportPPT").addEventListener("click", async () => {
 <div class="w-10 h-10 bg-gov-green rounded flex items-center justify-center mb-3">
 <i class="fas fa-fingerprint text-white"></i>
 </div>
-<h3 class="text-lg font-bold text-gov-green mb-2">Central Jail Integration</h3>
+<h3 class="text-lg font-bold text-gov-green mb-2">District Jail Integration</h3>
 <p class="text-sm text-gray-700 leading-relaxed">Dedicated login for Jail authorities to verify UTP status, ensuring accurate prioritization of incarcerated accused.</p>
 </div>
 </div>
@@ -673,8 +674,20 @@ document.getElementById("exportPPT").addEventListener("click", async () => {
 <p class="text-xs text-gray-500 font-bold uppercase tracking-wide mb-2">Registration</p>
 <p class="text-sm text-gray-600">Register FIR and initialize digital challan record</p>
 </div>
+</div>        
+<!-- Step 2: SP Investigation Office -->
+<div class="step-card flex flex-col items-center">
+<div class="w-20 h-20 bg-white rounded-2xl flex items-center justify-center shadow-lg mb-4 border-4 border-gov-blue z-10 relative">
+<i class="fas fa-magnifying-glass text-3xl text-gov-blue"></i>
+<div class="absolute -top-3 -left-3 w-8 h-8 bg-gray-600 rounded-full flex items-center justify-center text-white font-bold shadow-sm">2</div>
 </div>
-<!-- Step 2: DPP Office -->
+<div class="bg-white p-5 rounded-lg border-t-4 border-gray-600 shadow-md w-full text-center">
+<h3 class="font-bold text-gov-blue text-lg mb-1">SP Investigation Office</h3>
+<p class="text-xs text-gray-500 font-bold uppercase tracking-wide mb-2">Scrutiny</p>
+<p class="text-sm text-gray-600">Verify challan details or return for objection</p>
+</div>
+</div>
+<!-- Step 3: DPP Office -->
 <div class="step-card flex flex-col items-center">
 <div class="w-20 h-20 bg-white rounded-2xl flex items-center justify-center shadow-lg mb-4 border-4 border-gov-blue z-10 relative">
 <i class="fas fa-magnifying-glass text-3xl text-gov-blue"></i>
@@ -686,7 +699,7 @@ document.getElementById("exportPPT").addEventListener("click", async () => {
 <p class="text-sm text-gray-600">Verify challan details or return for objection</p>
 </div>
 </div>
-<!-- Step 3: Magistrate Office -->
+<!-- Step 4: Magistrate Office -->
 <div class="step-card flex flex-col items-center">
 <div class="w-20 h-20 bg-white rounded-2xl flex items-center justify-center shadow-lg mb-4 border-4 border-gov-blue z-10 relative">
 <i class="fas fa-user-pen text-3xl text-gov-blue"></i>
@@ -698,7 +711,7 @@ document.getElementById("exportPPT").addEventListener("click", async () => {
 <p class="text-sm text-gray-600">Mark for submission and link to Court Diary</p>
 </div>
 </div>
-<!-- Step 4: Court Submission -->
+<!-- Step 5: Court Submission -->
 <div class="step-card flex flex-col items-center">
 <div class="w-20 h-20 bg-gov-green rounded-2xl flex items-center justify-center shadow-lg mb-4 border-4 border-white z-10 relative">
 <i class="fas fa-gavel text-3xl text-white"></i>
@@ -722,7 +735,7 @@ document.getElementById("exportPPT").addEventListener("click", async () => {
 <i class="fas fa-lock text-2xl text-gov-green"></i>
 </div>
 <div class="flex-1">
-<h4 class="font-bold text-gov-green text-lg">Central Jail Database</h4>
+<h4 class="font-bold text-gov-green text-lg">District Jail Database</h4>
 <p class="text-sm text-gray-700">Automatic synchronization to verify Under Trial Prisoner (UTP) status. Flags high-priority cases immediately upon FIR registration or remand.</p>
 </div>
 <div class="ml-4 pl-4 border-l border-green-200">
@@ -856,6 +869,30 @@ document.getElementById("exportPPT").addEventListener("click", async () => {
 <span class="bg-blue-100 text-gov-blue px-3 py-1 rounded-full text-xs font-bold border border-blue-200">Data Entry</span>
 </td>
 </tr>
+<!-- SP Investigation Office -->
+<tr class="role-row bg-gray-50">
+<td class="py-4 px-6">
+<div class="flex items-center">
+<div class="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center mr-4 border border-indigo-200">
+<i class="fas fa-scale-balanced text-indigo-700"></i>
+</div>
+<div>
+<p class="font-bold text-gray-800">SP Investigation</p>
+<p class="text-xs text-gray-500">Office</p>
+</div>
+</div>
+</td>
+<td class="py-4 px-6">
+<ul class="text-sm text-gray-700 space-y-1">
+<li class="flex items-center"><i class="fas fa-check text-green-500 text-xs mr-2"></i> Scrutinize &amp; Verify Challan</li>
+<li class="flex items-center"><i class="fas fa-check text-green-500 text-xs mr-2"></i> Return to Police (Objection)</li>
+<li class="flex items-center"><i class="fas fa-check text-green-500 text-xs mr-2"></i> Forward to DPP Office with remarks</li>
+</ul>
+</td>
+<td class="py-4 px-6">
+<span class="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-xs font-bold border border-indigo-200">Verification</span>
+</td>
+</tr>
 <!-- DPP -->
 <tr class="role-row bg-gray-50">
 <td class="py-4 px-6">
@@ -904,7 +941,7 @@ document.getElementById("exportPPT").addEventListener("click", async () => {
 <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-xs font-bold border border-yellow-200">Submission</span>
 </td>
 </tr>
-<!-- Central Jail -->
+<!-- District Jail -->
 <tr class="role-row bg-gray-50">
 <td class="py-4 px-6">
 <div class="flex items-center">
@@ -912,7 +949,7 @@ document.getElementById("exportPPT").addEventListener("click", async () => {
 <i class="fas fa-lock text-red-700"></i>
 </div>
 <div>
-<p class="font-bold text-gray-800">Central Jail</p>
+<p class="font-bold text-gray-800">District Jail</p>
 <p class="text-xs text-gray-500">Jail Superintendent</p>
 </div>
 </div>
@@ -945,7 +982,7 @@ document.getElementById("exportPPT").addEventListener("click", async () => {
 <ul class="text-sm text-gray-700 space-y-1">
 <li class="flex items-center"><i class="fas fa-check text-gov-blue text-xs mr-2"></i> <strong>District-wide Dashboard Overview</strong></li>
 <li class="flex items-center"><i class="fas fa-check text-gov-blue text-xs mr-2"></i> Monitor UTPs &amp; Overdue Challans</li>
-<li class="flex items-center"><i class="fas fa-check text-gov-blue text-xs mr-2"></i> Add/Remove Police Stations &amp; Courts</li>
+<li class="flex items-center"><i class="fas fa-check text-gov-blue text-xs mr-2"></i> Administrative controls and monitoring</li>
 </ul>
 </td>
 <td class="py-4 px-6">
